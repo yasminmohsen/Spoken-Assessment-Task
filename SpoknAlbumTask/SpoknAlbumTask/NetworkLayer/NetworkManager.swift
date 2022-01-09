@@ -12,45 +12,43 @@ class NetworkManager: ApiServiceProtocol {
     var provider = MoyaProvider<ApiServices>()
     
     
+    
     // MARK: -Function Implementation
     
-    func fetchUser() -> Observable<User> {
+    func fetchHomeData() -> Observable<HomeModel> {
         
         return Observable.create { [weak self]observer -> Disposable in
-       
+            
             self?.provider.request(.user) { result in
                 
                 switch result{
                 case .success(let response):
-            
+                    
                     guard let usersArray:[User] = jsonConverterToModel(data: response.data)  else{return}
-                
+                    
                     guard let user = usersArray.randomElement() else{return}
-                    observer.onNext(user)
-            
-                case .failure(let error):
-                    observer.onError(error)
-                }
-                
-            }
-            
-            return Disposables.create()
-        }
-        
-    }
-    
-    func fetchAlbum(userId: Int) -> Observable<[Album]> {
-
-        return Observable.create { [weak self]observer -> Disposable in
-       
-            self?.provider.request(.albums(userId: userId)) { result in
-                
-                switch result{
-                case .success(let response):
-            
-                    guard let usersAlbum:[Album] = jsonConverterToModel(data: response.data)  else{return}
-                
-                    observer.onNext(usersAlbum)
+                    
+                    self?.provider.request(.albums(userId:user.id)) { result in
+                        
+                        switch result{
+                        case .success(let response):
+                            
+                            guard let usersAlbum:[Album] = jsonConverterToModel(data: response.data)  else{return}
+                            
+                            var userFullData = HomeModel(user: user, albums: usersAlbum)
+                            
+                            
+                            observer.onNext(userFullData)
+                            
+                            
+                        case .failure(let error):
+                            observer.onError(error)
+                        }
+                        
+                    }
+                    
+                    
+                    
                     
                 case .failure(let error):
                     observer.onError(error)
@@ -61,13 +59,6 @@ class NetworkManager: ApiServiceProtocol {
             return Disposables.create()
         }
         
-        
-        
     }
-//
-//    func fetchPhotos(albumId: Int) -> Observable<[AlbumImage]> {
-//
-//    }
-    
     
 }
