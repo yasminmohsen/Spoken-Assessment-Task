@@ -7,7 +7,6 @@
 
 import XCTest
 @testable import SpoknAlbumTask
-
 class SpoknAlbumTaskTests: XCTestCase {
 
     override func setUpWithError() throws {

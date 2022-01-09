@@ -6,7 +6,6 @@
 //
 
 import XCTest
-
 class SpoknAlbumTaskUITests: XCTestCase {
 
     override func setUpWithError() throws {

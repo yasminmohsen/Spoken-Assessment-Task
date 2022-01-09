@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,15 @@
 		6C3ADCC9278B37A7000418EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3ADCC7278B37A7000418EC /* LaunchScreen.storyboard */; };
 		6C3ADCD4278B37A7000418EC /* SpoknAlbumTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADCD3278B37A7000418EC /* SpoknAlbumTaskTests.swift */; };
 		6C3ADCDF278B37A7000418EC /* SpoknAlbumTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADCDE278B37A7000418EC /* SpoknAlbumTaskUITests.swift */; };
+		6C3ADCEE278B380D000418EC /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6C3ADCED278B380D000418EC /* RxSwift */; };
+		6C3ADCF0278B380D000418EC /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 6C3ADCEF278B380D000418EC /* RxTest */; };
+		6C3ADCF2278B380D000418EC /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 6C3ADCF1278B380D000418EC /* RxRelay */; };
+		6C3ADCF4278B380D000418EC /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 6C3ADCF3278B380D000418EC /* RxCocoa */; };
+		6C3ADCF6278B380D000418EC /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 6C3ADCF5278B380D000418EC /* RxBlocking */; };
+		6C3ADCF9278B394C000418EC /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 6C3ADCF8278B394C000418EC /* ReactiveMoya */; };
+		6C3ADCFB278B394C000418EC /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 6C3ADCFA278B394C000418EC /* CombineMoya */; };
+		6C3ADCFD278B394C000418EC /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 6C3ADCFC278B394C000418EC /* RxMoya */; };
+		6C3ADCFF278B394C000418EC /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 6C3ADCFE278B394C000418EC /* Moya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +67,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C3ADCFD278B394C000418EC /* RxMoya in Frameworks */,
+				6C3ADCF4278B380D000418EC /* RxCocoa in Frameworks */,
+				6C3ADCF9278B394C000418EC /* ReactiveMoya in Frameworks */,
+				6C3ADCF2278B380D000418EC /* RxRelay in Frameworks */,
+				6C3ADCFB278B394C000418EC /* CombineMoya in Frameworks */,
+				6C3ADCFF278B394C000418EC /* Moya in Frameworks */,
+				6C3ADCEE278B380D000418EC /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C3ADCF0278B380D000418EC /* RxTest in Frameworks */,
+				6C3ADCF6278B380D000418EC /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +165,15 @@
 			dependencies = (
 			);
 			name = SpoknAlbumTask;
+			packageProductDependencies = (
+				6C3ADCED278B380D000418EC /* RxSwift */,
+				6C3ADCF1278B380D000418EC /* RxRelay */,
+				6C3ADCF3278B380D000418EC /* RxCocoa */,
+				6C3ADCF8278B394C000418EC /* ReactiveMoya */,
+				6C3ADCFA278B394C000418EC /* CombineMoya */,
+				6C3ADCFC278B394C000418EC /* RxMoya */,
+				6C3ADCFE278B394C000418EC /* Moya */,
+			);
 			productName = SpoknAlbumTask;
 			productReference = 6C3ADCB6278B37A3000418EC /* SpoknAlbumTask.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +192,10 @@
 				6C3ADCD1278B37A7000418EC /* PBXTargetDependency */,
 			);
 			name = SpoknAlbumTaskTests;
+			packageProductDependencies = (
+				6C3ADCEF278B380D000418EC /* RxTest */,
+				6C3ADCF5278B380D000418EC /* RxBlocking */,
+			);
 			productName = SpoknAlbumTaskTests;
 			productReference = 6C3ADCCF278B37A7000418EC /* SpoknAlbumTaskTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -218,6 +249,10 @@
 				Base,
 			);
 			mainGroup = 6C3ADCAD278B37A3000418EC;
+			packageReferences = (
+				6C3ADCEC278B380D000418EC /* XCRemoteSwiftPackageReference "RxSwift" */,
+				6C3ADCF7278B394C000418EC /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 6C3ADCB7278B37A3000418EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -591,6 +626,73 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6C3ADCEC278B380D000418EC /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.0;
+			};
+		};
+		6C3ADCF7278B394C000418EC /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6C3ADCED278B380D000418EC /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C3ADCEC278B380D000418EC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		6C3ADCEF278B380D000418EC /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C3ADCEC278B380D000418EC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		6C3ADCF1278B380D000418EC /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C3ADCEC278B380D000418EC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		6C3ADCF3278B380D000418EC /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C3ADCEC278B380D000418EC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		6C3ADCF5278B380D000418EC /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C3ADCEC278B380D000418EC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		6C3ADCF8278B394C000418EC /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C3ADCF7278B394C000418EC /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		6C3ADCFA278B394C000418EC /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C3ADCF7278B394C000418EC /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		6C3ADCFC278B394C000418EC /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C3ADCF7278B394C000418EC /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		6C3ADCFE278B394C000418EC /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C3ADCF7278B394C000418EC /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		6C3ADCC2278B37A3000418EC /* SpoknAlbumTask.xcdatamodeld */ = {
