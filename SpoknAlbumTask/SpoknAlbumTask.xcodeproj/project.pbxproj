@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C3ADCBA278B37A3000418EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADCB9278B37A3000418EC /* AppDelegate.swift */; };
+		6C3ADCBC278B37A3000418EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADCBB278B37A3000418EC /* SceneDelegate.swift */; };
+		6C3ADCBE278B37A3000418EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADCBD278B37A3000418EC /* ViewController.swift */; };
+		6C3ADCC1278B37A3000418EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3ADCBF278B37A3000418EC /* Main.storyboard */; };
+		6C3ADCC4278B37A3000418EC /* SpoknAlbumTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADCC2278B37A3000418EC /* SpoknAlbumTask.xcdatamodeld */; };
+		6C3ADCC6278B37A7000418EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C3ADCC5278B37A7000418EC /* Assets.xcassets */; };
+		6C3ADCC9278B37A7000418EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3ADCC7278B37A7000418EC /* LaunchScreen.storyboard */; };
+		6C3ADCD4278B37A7000418EC /* SpoknAlbumTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADCD3278B37A7000418EC /* SpoknAlbumTaskTests.swift */; };
+		6C3ADCDF278B37A7000418EC /* SpoknAlbumTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADCDE278B37A7000418EC /* SpoknAlbumTaskUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6C3ADCD0278B37A7000418EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C3ADCAE278B37A3000418EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C3ADCB5278B37A3000418EC;
+			remoteInfo = SpoknAlbumTask;
+		};
+		6C3ADCDB278B37A7000418EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C3ADCAE278B37A3000418EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C3ADCB5278B37A3000418EC;
+			remoteInfo = SpoknAlbumTask;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6C3ADCB6278B37A3000418EC /* SpoknAlbumTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpoknAlbumTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C3ADCB9278B37A3000418EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6C3ADCBB278B37A3000418EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6C3ADCBD278B37A3000418EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6C3ADCC0278B37A3000418EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6C3ADCC3278B37A3000418EC /* SpoknAlbumTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpoknAlbumTask.xcdatamodel; sourceTree = "<group>"; };
+		6C3ADCC5278B37A7000418EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6C3ADCC8278B37A7000418EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6C3ADCCA278B37A7000418EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C3ADCCF278B37A7000418EC /* SpoknAlbumTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpoknAlbumTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C3ADCD3278B37A7000418EC /* SpoknAlbumTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoknAlbumTaskTests.swift; sourceTree = "<group>"; };
+		6C3ADCD5278B37A7000418EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C3ADCDA278B37A7000418EC /* SpoknAlbumTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpoknAlbumTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C3ADCDE278B37A7000418EC /* SpoknAlbumTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoknAlbumTaskUITests.swift; sourceTree = "<group>"; };
+		6C3ADCE0278B37A7000418EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6C3ADCB3278B37A3000418EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C3ADCCC278B37A7000418EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C3ADCD7278B37A7000418EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C3ADCAD278B37A3000418EC = {
+			isa = PBXGroup;
+			children = (
+				6C3ADCB8278B37A3000418EC /* SpoknAlbumTask */,
+				6C3ADCD2278B37A7000418EC /* SpoknAlbumTaskTests */,
+				6C3ADCDD278B37A7000418EC /* SpoknAlbumTaskUITests */,
+				6C3ADCB7278B37A3000418EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6C3ADCB7278B37A3000418EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C3ADCB6278B37A3000418EC /* SpoknAlbumTask.app */,
+				6C3ADCCF278B37A7000418EC /* SpoknAlbumTaskTests.xctest */,
+				6C3ADCDA278B37A7000418EC /* SpoknAlbumTaskUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C3ADCB8278B37A3000418EC /* SpoknAlbumTask */ = {
+			isa = PBXGroup;
+			children = (
+				6C3ADCB9278B37A3000418EC /* AppDelegate.swift */,
+				6C3ADCBB278B37A3000418EC /* SceneDelegate.swift */,
+				6C3ADCBD278B37A3000418EC /* ViewController.swift */,
+				6C3ADCBF278B37A3000418EC /* Main.storyboard */,
+				6C3ADCC5278B37A7000418EC /* Assets.xcassets */,
+				6C3ADCC7278B37A7000418EC /* LaunchScreen.storyboard */,
+				6C3ADCCA278B37A7000418EC /* Info.plist */,
+				6C3ADCC2278B37A3000418EC /* SpoknAlbumTask.xcdatamodeld */,
+			);
+			path = SpoknAlbumTask;
+			sourceTree = "<group>";
+		};
+		6C3ADCD2278B37A7000418EC /* SpoknAlbumTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				6C3ADCD3278B37A7000418EC /* SpoknAlbumTaskTests.swift */,
+				6C3ADCD5278B37A7000418EC /* Info.plist */,
+			);
+			path = SpoknAlbumTaskTests;
+			sourceTree = "<group>";
+		};
+		6C3ADCDD278B37A7000418EC /* SpoknAlbumTaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6C3ADCDE278B37A7000418EC /* SpoknAlbumTaskUITests.swift */,
+				6C3ADCE0278B37A7000418EC /* Info.plist */,
+			);
+			path = SpoknAlbumTaskUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C3ADCB5278B37A3000418EC /* SpoknAlbumTask */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C3ADCE3278B37A7000418EC /* Build configuration list for PBXNativeTarget "SpoknAlbumTask" */;
+			buildPhases = (
+				6C3ADCB2278B37A3000418EC /* Sources */,
+				6C3ADCB3278B37A3000418EC /* Frameworks */,
+				6C3ADCB4278B37A3000418EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpoknAlbumTask;
+			productName = SpoknAlbumTask;
+			productReference = 6C3ADCB6278B37A3000418EC /* SpoknAlbumTask.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6C3ADCCE278B37A7000418EC /* SpoknAlbumTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C3ADCE6278B37A7000418EC /* Build configuration list for PBXNativeTarget "SpoknAlbumTaskTests" */;
+			buildPhases = (
+				6C3ADCCB278B37A7000418EC /* Sources */,
+				6C3ADCCC278B37A7000418EC /* Frameworks */,
+				6C3ADCCD278B37A7000418EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C3ADCD1278B37A7000418EC /* PBXTargetDependency */,
+			);
+			name = SpoknAlbumTaskTests;
+			productName = SpoknAlbumTaskTests;
+			productReference = 6C3ADCCF278B37A7000418EC /* SpoknAlbumTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6C3ADCD9278B37A7000418EC /* SpoknAlbumTaskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C3ADCE9278B37A7000418EC /* Build configuration list for PBXNativeTarget "SpoknAlbumTaskUITests" */;
+			buildPhases = (
+				6C3ADCD6278B37A7000418EC /* Sources */,
+				6C3ADCD7278B37A7000418EC /* Frameworks */,
+				6C3ADCD8278B37A7000418EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C3ADCDC278B37A7000418EC /* PBXTargetDependency */,
+			);
+			name = SpoknAlbumTaskUITests;
+			productName = SpoknAlbumTaskUITests;
+			productReference = 6C3ADCDA278B37A7000418EC /* SpoknAlbumTaskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6C3ADCAE278B37A3000418EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					6C3ADCB5278B37A3000418EC = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					6C3ADCCE278B37A7000418EC = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 6C3ADCB5278B37A3000418EC;
+					};
+					6C3ADCD9278B37A7000418EC = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 6C3ADCB5278B37A3000418EC;
+					};
+				};
+			};
+			buildConfigurationList = 6C3ADCB1278B37A3000418EC /* Build configuration list for PBXProject "SpoknAlbumTask" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6C3ADCAD278B37A3000418EC;
+			productRefGroup = 6C3ADCB7278B37A3000418EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C3ADCB5278B37A3000418EC /* SpoknAlbumTask */,
+				6C3ADCCE278B37A7000418EC /* SpoknAlbumTaskTests */,
+				6C3ADCD9278B37A7000418EC /* SpoknAlbumTaskUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6C3ADCB4278B37A3000418EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C3ADCC9278B37A7000418EC /* LaunchScreen.storyboard in Resources */,
+				6C3ADCC6278B37A7000418EC /* Assets.xcassets in Resources */,
+				6C3ADCC1278B37A3000418EC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C3ADCCD278B37A7000418EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C3ADCD8278B37A7000418EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6C3ADCB2278B37A3000418EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C3ADCBE278B37A3000418EC /* ViewController.swift in Sources */,
+				6C3ADCBA278B37A3000418EC /* AppDelegate.swift in Sources */,
+				6C3ADCC4278B37A3000418EC /* SpoknAlbumTask.xcdatamodeld in Sources */,
+				6C3ADCBC278B37A3000418EC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C3ADCCB278B37A7000418EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C3ADCD4278B37A7000418EC /* SpoknAlbumTaskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C3ADCD6278B37A7000418EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C3ADCDF278B37A7000418EC /* SpoknAlbumTaskUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C3ADCD1278B37A7000418EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C3ADCB5278B37A3000418EC /* SpoknAlbumTask */;
+			targetProxy = 6C3ADCD0278B37A7000418EC /* PBXContainerItemProxy */;
+		};
+		6C3ADCDC278B37A7000418EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C3ADCB5278B37A3000418EC /* SpoknAlbumTask */;
+			targetProxy = 6C3ADCDB278B37A7000418EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6C3ADCBF278B37A3000418EC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C3ADCC0278B37A3000418EC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6C3ADCC7278B37A7000418EC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C3ADCC8278B37A7000418EC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6C3ADCE1278B37A7000418EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6C3ADCE2278B37A7000418EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6C3ADCE4278B37A7000418EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpoknAlbumTask/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.optimalsoft.SpoknAlbumTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6C3ADCE5278B37A7000418EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpoknAlbumTask/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.optimalsoft.SpoknAlbumTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6C3ADCE7278B37A7000418EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpoknAlbumTaskTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.optimalsoft.SpoknAlbumTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpoknAlbumTask.app/SpoknAlbumTask";
+			};
+			name = Debug;
+		};
+		6C3ADCE8278B37A7000418EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpoknAlbumTaskTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.optimalsoft.SpoknAlbumTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpoknAlbumTask.app/SpoknAlbumTask";
+			};
+			name = Release;
+		};
+		6C3ADCEA278B37A7000418EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpoknAlbumTaskUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.optimalsoft.SpoknAlbumTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SpoknAlbumTask;
+			};
+			name = Debug;
+		};
+		6C3ADCEB278B37A7000418EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpoknAlbumTaskUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.optimalsoft.SpoknAlbumTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SpoknAlbumTask;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C3ADCB1278B37A3000418EC /* Build configuration list for PBXProject "SpoknAlbumTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C3ADCE1278B37A7000418EC /* Debug */,
+				6C3ADCE2278B37A7000418EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C3ADCE3278B37A7000418EC /* Build configuration list for PBXNativeTarget "SpoknAlbumTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C3ADCE4278B37A7000418EC /* Debug */,
+				6C3ADCE5278B37A7000418EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C3ADCE6278B37A7000418EC /* Build configuration list for PBXNativeTarget "SpoknAlbumTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C3ADCE7278B37A7000418EC /* Debug */,
+				6C3ADCE8278B37A7000418EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C3ADCE9278B37A7000418EC /* Build configuration list for PBXNativeTarget "SpoknAlbumTaskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C3ADCEA278B37A7000418EC /* Debug */,
+				6C3ADCEB278B37A7000418EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6C3ADCC2278B37A3000418EC /* SpoknAlbumTask.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6C3ADCC3278B37A3000418EC /* SpoknAlbumTask.xcdatamodel */,
+			);
+			currentVersion = 6C3ADCC3278B37A3000418EC /* SpoknAlbumTask.xcdatamodel */;
+			path = SpoknAlbumTask.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6C3ADCAE278B37A3000418EC /* Project object */;
+}
