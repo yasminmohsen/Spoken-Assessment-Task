@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6C3ADCBA278B37A3000418EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADCB9278B37A3000418EC /* AppDelegate.swift */; };
 		6C3ADCBC278B37A3000418EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADCBB278B37A3000418EC /* SceneDelegate.swift */; };
-		6C3ADCBE278B37A3000418EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADCBD278B37A3000418EC /* ViewController.swift */; };
 		6C3ADCC1278B37A3000418EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3ADCBF278B37A3000418EC /* Main.storyboard */; };
 		6C3ADCC4278B37A3000418EC /* SpoknAlbumTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADCC2278B37A3000418EC /* SpoknAlbumTask.xcdatamodeld */; };
 		6C3ADCC6278B37A7000418EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C3ADCC5278B37A7000418EC /* Assets.xcassets */; };
@@ -25,6 +24,19 @@
 		6C3ADCFB278B394C000418EC /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 6C3ADCFA278B394C000418EC /* CombineMoya */; };
 		6C3ADCFD278B394C000418EC /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 6C3ADCFC278B394C000418EC /* RxMoya */; };
 		6C3ADCFF278B394C000418EC /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 6C3ADCFE278B394C000418EC /* Moya */; };
+		6C3ADD04278B3A25000418EC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6C3ADD03278B3A25000418EC /* Kingfisher */; };
+		6C3ADD0E278B3B62000418EC /* JsonConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADD0D278B3B62000418EC /* JsonConverter.swift */; };
+		6C3ADD12278B3B8E000418EC /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADD11278B3B8E000418EC /* ApiServices.swift */; };
+		6C3ADD14278B3BCD000418EC /* ApiServocesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADD13278B3BCD000418EC /* ApiServocesExtension.swift */; };
+		6C3ADD16278B3C1D000418EC /* ApiServicesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADD15278B3C1D000418EC /* ApiServicesProtocol.swift */; };
+		6C3ADD18278B3C5D000418EC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADD17278B3C5D000418EC /* UserModel.swift */; };
+		6C3ADD1A278B3C69000418EC /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADD19278B3C69000418EC /* AlbumModel.swift */; };
+		6C3ADD1C278B3C77000418EC /* AlbumImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADD1B278B3C77000418EC /* AlbumImage.swift */; };
+		6C3ADD1E278B3C86000418EC /* HomeUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADD1D278B3C86000418EC /* HomeUserModel.swift */; };
+		6C3ADD20278B3D6B000418EC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADD1F278B3D6B000418EC /* NetworkManager.swift */; };
+		6C3ADD22278B3D9F000418EC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADD21278B3D9F000418EC /* HomeViewModel.swift */; };
+		6C3ADD24278B3DCB000418EC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADD23278B3DCB000418EC /* HomeViewController.swift */; };
+		6C3ADD27278B3DF3000418EC /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADD26278B3DF3000418EC /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +60,6 @@
 		6C3ADCB6278B37A3000418EC /* SpoknAlbumTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpoknAlbumTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3ADCB9278B37A3000418EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C3ADCBB278B37A3000418EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6C3ADCBD278B37A3000418EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6C3ADCC0278B37A3000418EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C3ADCC3278B37A3000418EC /* SpoknAlbumTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpoknAlbumTask.xcdatamodel; sourceTree = "<group>"; };
 		6C3ADCC5278B37A7000418EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +71,18 @@
 		6C3ADCDA278B37A7000418EC /* SpoknAlbumTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpoknAlbumTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3ADCDE278B37A7000418EC /* SpoknAlbumTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoknAlbumTaskUITests.swift; sourceTree = "<group>"; };
 		6C3ADCE0278B37A7000418EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C3ADD0D278B3B62000418EC /* JsonConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonConverter.swift; sourceTree = "<group>"; };
+		6C3ADD11278B3B8E000418EC /* ApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
+		6C3ADD13278B3BCD000418EC /* ApiServocesExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServocesExtension.swift; sourceTree = "<group>"; };
+		6C3ADD15278B3C1D000418EC /* ApiServicesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServicesProtocol.swift; sourceTree = "<group>"; };
+		6C3ADD17278B3C5D000418EC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		6C3ADD19278B3C69000418EC /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
+		6C3ADD1B278B3C77000418EC /* AlbumImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumImage.swift; sourceTree = "<group>"; };
+		6C3ADD1D278B3C86000418EC /* HomeUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUserModel.swift; sourceTree = "<group>"; };
+		6C3ADD1F278B3D6B000418EC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		6C3ADD21278B3D9F000418EC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		6C3ADD23278B3DCB000418EC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6C3ADD26278B3DF3000418EC /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +94,7 @@
 				6C3ADCF4278B380D000418EC /* RxCocoa in Frameworks */,
 				6C3ADCF9278B394C000418EC /* ReactiveMoya in Frameworks */,
 				6C3ADCF2278B380D000418EC /* RxRelay in Frameworks */,
+				6C3ADD04278B3A25000418EC /* Kingfisher in Frameworks */,
 				6C3ADCFB278B394C000418EC /* CombineMoya in Frameworks */,
 				6C3ADCFF278B394C000418EC /* Moya in Frameworks */,
 				6C3ADCEE278B380D000418EC /* RxSwift in Frameworks */,
@@ -119,9 +143,14 @@
 		6C3ADCB8278B37A3000418EC /* SpoknAlbumTask */ = {
 			isa = PBXGroup;
 			children = (
+				6C3ADD0A278B3A81000418EC /* Generics */,
+				6C3ADD09278B3A7D000418EC /* ApiService */,
+				6C3ADD06278B3A61000418EC /* NetworkLayer */,
+				6C3ADD08278B3A67000418EC /* Model */,
+				6C3ADD07278B3A64000418EC /* ViewModel */,
+				6C3ADD05278B3A5E000418EC /* Modules */,
 				6C3ADCB9278B37A3000418EC /* AppDelegate.swift */,
 				6C3ADCBB278B37A3000418EC /* SceneDelegate.swift */,
-				6C3ADCBD278B37A3000418EC /* ViewController.swift */,
 				6C3ADCBF278B37A3000418EC /* Main.storyboard */,
 				6C3ADCC5278B37A7000418EC /* Assets.xcassets */,
 				6C3ADCC7278B37A7000418EC /* LaunchScreen.storyboard */,
@@ -149,6 +178,84 @@
 			path = SpoknAlbumTaskUITests;
 			sourceTree = "<group>";
 		};
+		6C3ADD05278B3A5E000418EC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6C3ADD25278B3DD6000418EC /* Cells */,
+				6C3ADD23278B3DCB000418EC /* HomeViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6C3ADD06278B3A61000418EC /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				6C3ADD1F278B3D6B000418EC /* NetworkManager.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		6C3ADD07278B3A64000418EC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6C3ADD21278B3D9F000418EC /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6C3ADD08278B3A67000418EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C3ADD17278B3C5D000418EC /* UserModel.swift */,
+				6C3ADD19278B3C69000418EC /* AlbumModel.swift */,
+				6C3ADD1B278B3C77000418EC /* AlbumImage.swift */,
+				6C3ADD1D278B3C86000418EC /* HomeUserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6C3ADD09278B3A7D000418EC /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				6C3ADD10278B3B78000418EC /* Protocol */,
+				6C3ADD0F278B3B6F000418EC /* Extension */,
+				6C3ADD11278B3B8E000418EC /* ApiServices.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		6C3ADD0A278B3A81000418EC /* Generics */ = {
+			isa = PBXGroup;
+			children = (
+				6C3ADD0D278B3B62000418EC /* JsonConverter.swift */,
+			);
+			path = Generics;
+			sourceTree = "<group>";
+		};
+		6C3ADD0F278B3B6F000418EC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6C3ADD13278B3BCD000418EC /* ApiServocesExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		6C3ADD10278B3B78000418EC /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				6C3ADD15278B3C1D000418EC /* ApiServicesProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		6C3ADD25278B3DD6000418EC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6C3ADD26278B3DF3000418EC /* HomeTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,6 +280,7 @@
 				6C3ADCFA278B394C000418EC /* CombineMoya */,
 				6C3ADCFC278B394C000418EC /* RxMoya */,
 				6C3ADCFE278B394C000418EC /* Moya */,
+				6C3ADD03278B3A25000418EC /* Kingfisher */,
 			);
 			productName = SpoknAlbumTask;
 			productReference = 6C3ADCB6278B37A3000418EC /* SpoknAlbumTask.app */;
@@ -252,6 +360,7 @@
 			packageReferences = (
 				6C3ADCEC278B380D000418EC /* XCRemoteSwiftPackageReference "RxSwift" */,
 				6C3ADCF7278B394C000418EC /* XCRemoteSwiftPackageReference "Moya" */,
+				6C3ADD02278B3A25000418EC /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 6C3ADCB7278B37A3000418EC /* Products */;
 			projectDirPath = "";
@@ -296,9 +405,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C3ADCBE278B37A3000418EC /* ViewController.swift in Sources */,
+				6C3ADD12278B3B8E000418EC /* ApiServices.swift in Sources */,
+				6C3ADD1A278B3C69000418EC /* AlbumModel.swift in Sources */,
+				6C3ADD14278B3BCD000418EC /* ApiServocesExtension.swift in Sources */,
+				6C3ADD20278B3D6B000418EC /* NetworkManager.swift in Sources */,
+				6C3ADD1E278B3C86000418EC /* HomeUserModel.swift in Sources */,
+				6C3ADD24278B3DCB000418EC /* HomeViewController.swift in Sources */,
+				6C3ADD0E278B3B62000418EC /* JsonConverter.swift in Sources */,
+				6C3ADD16278B3C1D000418EC /* ApiServicesProtocol.swift in Sources */,
 				6C3ADCBA278B37A3000418EC /* AppDelegate.swift in Sources */,
+				6C3ADD22278B3D9F000418EC /* HomeViewModel.swift in Sources */,
 				6C3ADCC4278B37A3000418EC /* SpoknAlbumTask.xcdatamodeld in Sources */,
+				6C3ADD1C278B3C77000418EC /* AlbumImage.swift in Sources */,
+				6C3ADD18278B3C5D000418EC /* UserModel.swift in Sources */,
+				6C3ADD27278B3DF3000418EC /* HomeTableViewCell.swift in Sources */,
 				6C3ADCBC278B37A3000418EC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,6 +764,14 @@
 				minimumVersion = 15.0.0;
 			};
 		};
+		6C3ADD02278B3A25000418EC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -691,6 +819,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6C3ADCF7278B394C000418EC /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		6C3ADD03278B3A25000418EC /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C3ADD02278B3A25000418EC /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 
