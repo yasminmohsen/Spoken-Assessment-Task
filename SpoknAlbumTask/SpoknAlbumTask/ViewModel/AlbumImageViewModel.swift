@@ -8,11 +8,14 @@
 import Foundation
 import RxSwift
 import Moya
+import RxCocoa
 class AlbumImageViewModel {
     
     var apiService :ApiServiceProtocol!
     var disposeBag :DisposeBag!
-    lazy var albumImagesPublishSubj = PublishSubject<[AlbumImage]>()
+    lazy var imageBehaviourRelay = BehaviorRelay<[AlbumImage]>(value: [])
+    //lazy var totalAlbumImagesPublishSubj = [AlbumImage]()
+    
     
     
     init(apiService :ApiServiceProtocol = NetworkManager()) {
@@ -28,8 +31,9 @@ class AlbumImageViewModel {
       let imagesObserve = apiService.fetchPhotos(albumId: albumId)
         
         imagesObserve.subscribe(on: ConcurrentDispatchQueueScheduler.init(qos: .background)).observe(on: MainScheduler.asyncInstance).subscribe(onNext: {[weak self] albumImage in
-               
-                 self?.albumImagesPublishSubj.onNext(albumImage)
+           
+                 self?.imageBehaviourRelay.accept(albumImage)
+            
 
              }, onError: { error in
                  print(error.localizedDescription)
@@ -40,7 +44,16 @@ class AlbumImageViewModel {
     }
         
         
-
+//    func filterimageArray(imageTitle:String){
+//        
+//        let filteredArr = totalAlbumImagesPublishSubj.filter({$0.imageTitle.lowercased() == imageTitle.lowercased()})
+//        albumImagesPublishSubj.onNext(filteredArr)
+//
+//            
+//      
+//        
+//        
+//    }
     
     
     

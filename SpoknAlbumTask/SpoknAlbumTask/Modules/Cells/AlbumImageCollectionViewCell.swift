@@ -15,7 +15,7 @@ class AlbumImageCollectionViewCell: UICollectionViewCell {
     func configuralbumImageCell(albumImageObj : AlbumImage)
     
     {
-        let url = URL(string: albumImageObj.thumbnailURL)
+        let url = URL(string: albumImageObj.imageURL)
         albumImage.kf.setImage(with: url)
         
         
