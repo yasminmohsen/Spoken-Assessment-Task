@@ -20,15 +20,16 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var albumTableView: UITableView!
     
     lazy var homeViewModel = HomeViewModel()
-    lazy var disposeBag = DisposeBag()
+    var disposeBag : DisposeBag!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+     
     }
     
 
     override func viewWillAppear(_ animated: Bool) {
+        disposeBag = DisposeBag()
         setUpObserver()
         homeViewModel.fetchHomeData()
         
@@ -36,7 +37,8 @@ class HomeViewController: UIViewController {
     
     
     func setUpObserver(){
-        
+        albumTableView.delegate = nil
+        albumTableView.dataSource = nil
         homeViewModel.homePublishSubj.map {return $0.user.name}.bind(to: userNamelabel.rx.text).disposed(by: disposeBag)
         
         homeViewModel.homePublishSubj.map {return "\($0.user.address.street),\($0.user.address.suite),\($0.user.address.city)"}.bind(to:userAddressLabel.rx.text).disposed(by: disposeBag)
@@ -47,8 +49,24 @@ class HomeViewController: UIViewController {
             cell.coinfigurCell(albumObj: item)
             
         }.disposed(by: disposeBag)
+
         
-    }
+        
+        albumTableView.rx.modelSelected(Album.self).subscribe(onNext: { albm in
+            if let vc = self.storyboard?.instantiateViewController(identifier: "AlbumImgVC")as?AlbumImageViewController{
+            
+            
+                vc.albumId = albm.albumID
+            
+                            self.navigationController?.pushViewController(vc, animated: true)
+      
+            }}).disposed(by: disposeBag)
+        
+        
+    
+        }
+    
+    
     
    
 }

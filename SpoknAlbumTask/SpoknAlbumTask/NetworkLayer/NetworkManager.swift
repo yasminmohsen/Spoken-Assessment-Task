@@ -9,6 +9,7 @@ import Foundation
 import Moya
 import RxSwift
 class NetworkManager: ApiServiceProtocol {
+   
     var provider = MoyaProvider<ApiServices>()
     
     
@@ -60,5 +61,46 @@ class NetworkManager: ApiServiceProtocol {
         }
         
     }
+    
+    
+    
+    
+    
+    func fetchPhotos(albumId: Int) -> Observable<[AlbumImage]> {
+         
+        return Observable.create {[weak self] observer -> Disposable in
+            
+            self?.provider.request(.images(albumId: albumId)) { result in
+                switch result {
+                
+                case .success(let response):
+                    
+                    guard let imagesAlbum:[AlbumImage] = jsonConverterToModel(data: response.data)  else{return}
+                    observer.onNext(imagesAlbum)
+                    
+                case .failure(let error):
+                    observer.onError(error)
+                
+                
+                }
+                        
+            }
+       
+            return Disposables.create()
+        }
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
     
 }
