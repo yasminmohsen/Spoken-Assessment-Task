@@ -8,6 +8,8 @@
 import Foundation
 import Moya
 
+// MARK: - Add Moya Configurations
+
 extension ApiServices:TargetType {
     var baseURL: URL {
         return URL(string: "https://jsonplaceholder.typicode.com")!
@@ -52,9 +54,5 @@ extension ApiServices:TargetType {
     var headers: [String : String]? {
         return nil
     }
-    
-    
-    
-    
 }
 

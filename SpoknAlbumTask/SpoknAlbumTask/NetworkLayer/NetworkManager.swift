@@ -13,8 +13,7 @@ class NetworkManager: ApiServiceProtocol {
     var provider = MoyaProvider<ApiServices>()
     
     
-    
-    // MARK: -Function Implementation
+    // MARK: - fetchHomeData Function Implementation
     
     func fetchHomeData() -> Observable<HomeModel> {
         
@@ -29,6 +28,8 @@ class NetworkManager: ApiServiceProtocol {
                     
                     guard let user = usersArray.randomElement() else{return}
                     
+                    // MARK: - fetch albums using random userID :-
+                    
                     self?.provider.request(.albums(userId:user.id)) { result in
                         
                         switch result{
@@ -36,20 +37,15 @@ class NetworkManager: ApiServiceProtocol {
                             
                             guard let usersAlbum:[Album] = jsonConverterToModel(data: response.data)  else{return}
                             
-                            var userFullData = HomeModel(user: user, albums: usersAlbum)
-                            
+                            let userFullData = HomeModel(user: user, albums: usersAlbum)
                             
                             observer.onNext(userFullData)
-                            
                             
                         case .failure(let error):
                             observer.onError(error)
                         }
-                        
+    
                     }
-                    
-                    
-                    
                     
                 case .failure(let error):
                     observer.onError(error)
@@ -64,7 +60,7 @@ class NetworkManager: ApiServiceProtocol {
     
     
     
-    
+    // MARK: - fetchPhotos Function Implementation
     
     func fetchPhotos(albumId: Int) -> Observable<[AlbumImage]> {
          

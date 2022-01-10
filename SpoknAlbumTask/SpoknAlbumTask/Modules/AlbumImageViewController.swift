@@ -10,39 +10,38 @@ import RxSwift
 import RxCocoa
 
 class AlbumImageViewController: UIViewController {
-
-
-    
+    //MARK: - Outlets
     @IBOutlet weak var searchBar: UISearchBar!
-    
     @IBOutlet weak var imageCollectionView: UICollectionView!
     
+    //MARK: - Properties
     lazy var albumImageViewModel = AlbumImageViewModel()
-    lazy var imageBehaviourRelay = BehaviorRelay<[AlbumImage]>(value: [])
+    private let disposeBag = DisposeBag()
     var albumId :Int!
-    var disposeBag : DisposeBag!
+   
+    //MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        setUpUi()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setUpUi()
-        disposeBag = DisposeBag()
         bindViewModel()
+        ///Call ViewModel Fetching Func To Fetch Images  From Api
         albumImageViewModel.fetchImages(albumId: albumId)
     }
 
  
     func bindViewModel(){
         
-        
+        ///1- get the search query from searchText [no need to use debounce as it request data from memory not from server ]
         let query = searchBar.rx.text
                 .orEmpty
                 .distinctUntilChanged()
-
-        Observable.combineLatest(albumImageViewModel.imageBehaviourRelay, query) { [unowned self] (allContacts, query) -> [AlbumImage] in
-            return self.albumImageViewModel.filteredContacts(with: allContacts, query: query)
+        
+        ///2- filter the images array and returned filtered array as observable then bind it collectionView
+        Observable.combineLatest(albumImageViewModel.imageBehaviourRelay, query) { [unowned self] (allImages, query) -> [AlbumImage] in
+            return self.albumImageViewModel.filteredContacts(with: allImages, query: query)
                 }
         .bind(to: imageCollectionView.rx.items(cellIdentifier: "cell", cellType: AlbumImageCollectionViewCell.self)){ row , item ,cell in
             cell.configuralbumImageCell(albumImageObj: item)

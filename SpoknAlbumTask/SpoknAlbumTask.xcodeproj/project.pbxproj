@@ -149,19 +149,17 @@
 		6C3ADCB8278B37A3000418EC /* SpoknAlbumTask */ = {
 			isa = PBXGroup;
 			children = (
+				6CC5AC92278C2B2A00CC778E /* Other */,
 				6C3ADD0A278B3A81000418EC /* Generics */,
 				6C3ADD09278B3A7D000418EC /* ApiService */,
 				6C3ADD06278B3A61000418EC /* NetworkLayer */,
 				6C3ADD08278B3A67000418EC /* Model */,
 				6C3ADD07278B3A64000418EC /* ViewModel */,
 				6C3ADD05278B3A5E000418EC /* Modules */,
-				6C3ADCB9278B37A3000418EC /* AppDelegate.swift */,
-				6C3ADCBB278B37A3000418EC /* SceneDelegate.swift */,
-				6C3ADCBF278B37A3000418EC /* Main.storyboard */,
+				6CC5AC91278C2AE700CC778E /* View */,
 				6C3ADCC5278B37A7000418EC /* Assets.xcassets */,
-				6C3ADCC7278B37A7000418EC /* LaunchScreen.storyboard */,
-				6C3ADCCA278B37A7000418EC /* Info.plist */,
 				6C3ADCC2278B37A3000418EC /* SpoknAlbumTask.xcdatamodeld */,
+				6C3ADCCA278B37A7000418EC /* Info.plist */,
 			);
 			path = SpoknAlbumTask;
 			sourceTree = "<group>";
@@ -263,6 +261,24 @@
 				6C3ADD2A278B5B5E000418EC /* AlbumImageCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		6CC5AC91278C2AE700CC778E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6C3ADCC7278B37A7000418EC /* LaunchScreen.storyboard */,
+				6C3ADCBF278B37A3000418EC /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6CC5AC92278C2B2A00CC778E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				6C3ADCB9278B37A3000418EC /* AppDelegate.swift */,
+				6C3ADCBB278B37A3000418EC /* SceneDelegate.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

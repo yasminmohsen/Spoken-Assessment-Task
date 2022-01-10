@@ -9,31 +9,30 @@ import Foundation
 import RxSwift
 class HomeViewModel {
     
-    var apiService :ApiServiceProtocol!
-    var disposeBag :DisposeBag!
+    private var apiService :ApiServiceProtocol!
+    private let disposeBag :DisposeBag!
     lazy var homePublishSubj = PublishSubject<HomeModel>()
-    lazy var albumPublishSubj = PublishSubject<[Album]>()
+    
+    
     init(apiService :ApiServiceProtocol = NetworkManager()) {
         self.apiService = apiService
         disposeBag = DisposeBag()
     }
     
     
+    //MARK: - Fetching HomeData From Api
+    
     func fetchHomeData(){
-        
-        let homeObserv = apiService.fetchHomeData()
-             homeObserv.subscribe(on: ConcurrentDispatchQueueScheduler.init(qos: .background)).observe(on: MainScheduler.asyncInstance).subscribe(onNext: {[weak self] homeModelData in
-               
-                 self?.homePublishSubj.onNext(homeModelData)
-
-             }, onError: { error in
-                 print(error.localizedDescription)
-             }).disposed(by: disposeBag)
-
- 
+        let homeObserve = apiService.fetchHomeData()
+        homeObserve.subscribe(on: ConcurrentDispatchQueueScheduler.init(qos: .background)).observe(on: MainScheduler.asyncInstance).subscribe(onNext: {[weak self] homeData in
+            ///Emit HomeData value to homePublishSubj
+            self?.homePublishSubj.onNext(homeData)
+            
+        }, onError: { error in
+            ///Emit Error to homePublishSubj
+            self.homePublishSubj.onError(error)
     
+        }).disposed(by: disposeBag)
     }
-    
-    
     
 }

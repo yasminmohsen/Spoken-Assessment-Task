@@ -6,10 +6,11 @@
 //
 
 import Foundation
+
 struct Album: Codable {
     let userID, albumID: Int
     let albumTitle: String
-
+    
     enum CodingKeys: String, CodingKey {
         case userID = "userId"
         case albumID = "id"

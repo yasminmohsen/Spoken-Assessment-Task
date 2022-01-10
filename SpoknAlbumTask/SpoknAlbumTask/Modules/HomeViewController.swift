@@ -10,60 +10,49 @@ import RxCocoa
 import RxSwift
 
 class HomeViewController: UIViewController {
+    //MARK: - Outlets
+    @IBOutlet private weak var userNamelabel: UILabel!
+    @IBOutlet private weak var userAddressLabel: UILabel!
+    @IBOutlet private weak var userZipCodeLabel: UILabel!
+    @IBOutlet private weak var albumTableView: UITableView!
     
-    @IBOutlet weak var userNamelabel: UILabel!
+    //MARK: - Properties
+    private lazy var homeViewModel = HomeViewModel()
+    private var disposeBag : DisposeBag!
     
-    @IBOutlet weak var userAddressLabel: UILabel!
+    //MARK: - Functions
+    override func viewDidLoad() {super.viewDidLoad()}
     
-    @IBOutlet weak var userZipCodeLabel: UILabel!
-    
-    @IBOutlet weak var albumTableView: UITableView!
-    
-    lazy var homeViewModel = HomeViewModel()
-    var disposeBag : DisposeBag!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-     
-    }
-    
-
     override func viewWillAppear(_ animated: Bool) {
         disposeBag = DisposeBag()
-        setUpObserver()
+        bindViewModel()
+        ///Call ViewModel Fetching Func To Fetch HomeData From Api
         homeViewModel.fetchHomeData()
-        
     }
     
-    
-    func setUpObserver(){
-        
+    func bindViewModel(){
+        ///Bind userName to userNameLabel
         homeViewModel.homePublishSubj.map {return $0.user.name}.bind(to: userNamelabel.rx.text).disposed(by: disposeBag)
         
+        ///Bind userAddress to userAddressLabel
         homeViewModel.homePublishSubj.map {return "\($0.user.address.street),\($0.user.address.suite),\($0.user.address.city)"}.bind(to:userAddressLabel.rx.text).disposed(by: disposeBag)
         
+        ///Bind userAddress.zipcode to userZipCodeLabel
         homeViewModel.homePublishSubj.map {return $0.user.address.zipcode}.bind(to: userZipCodeLabel.rx.text).disposed(by: disposeBag)
         
+        ///Bind userAlbum to AlbumTableView
         homeViewModel.homePublishSubj.map({return $0.albums}).bind(to: albumTableView.rx.items(cellIdentifier: "cell", cellType: HomeTableViewCell.self)){row , item ,cell in
             cell.coinfigurCell(albumObj: item)
             
         }.disposed(by: disposeBag)
-
         
-        
+        /// Trigger cellSelecting Action
         albumTableView.rx.modelSelected(Album.self).subscribe(onNext: { albm in
-            if let vc = self.storyboard?.instantiateViewController(identifier: "AlbumImgVC")as?AlbumImageViewController{
-            
-            
-                vc.albumId = albm.albumID
-            
-                            self.navigationController?.pushViewController(vc, animated: true)
-      
-            }}).disposed(by: disposeBag)
+           if let vc = self.storyboard?.instantiateViewController(identifier: "AlbumImgVC")as?AlbumImageViewController{
+            vc.albumId = albm.albumID
+            self.navigationController?.pushViewController(vc, animated: true)
+             }}).disposed(by: disposeBag)
         
-        
-    
-        }
-  
+    }
 }
 

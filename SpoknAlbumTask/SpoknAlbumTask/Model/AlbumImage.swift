@@ -6,10 +6,12 @@
 //
 
 import Foundation
+
 struct AlbumImage: Codable {
+    
     let albumID, imageId: Int
     let imageTitle,imageURL, thumbnailURL: String
-
+    
     enum CodingKeys: String, CodingKey {
         case albumID = "albumId"
         case imageId = "id"

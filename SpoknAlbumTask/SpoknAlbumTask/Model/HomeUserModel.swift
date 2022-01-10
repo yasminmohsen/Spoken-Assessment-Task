@@ -6,10 +6,9 @@
 //
 
 import Foundation
+
 struct HomeModel {
-    
     let user:User
     let albums :[Album]
-   
 }
 
