@@ -7,32 +7,95 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 class HomeViewModel {
     
+    //MARK: - Proprties
     private var apiService :ApiServiceProtocol!
-    private let disposeBag :DisposeBag!
+    private let disposeBag = DisposeBag()
+    private lazy var userBehaviorRelay = BehaviorRelay<User?>(value: nil)
+    private lazy var albumBehaviorRelay = BehaviorRelay<[Album]>(value: [])
     lazy var homePublishSubj = PublishSubject<HomeModel>()
-    
-    
+   
     init(apiService :ApiServiceProtocol = NetworkManager()) {
         self.apiService = apiService
-        disposeBag = DisposeBag()
     }
     
     
     //MARK: - Fetching HomeData From Api
     
     func fetchHomeData(){
-        let homeObserve = apiService.fetchHomeData()
-        homeObserve.subscribe(on: ConcurrentDispatchQueueScheduler.init(qos: .background)).observe(on: MainScheduler.asyncInstance).subscribe(onNext: {[weak self] homeData in
-            ///Emit HomeData value to homePublishSubj
-            self?.homePublishSubj.onNext(homeData)
-            
+        
+        apiService.getUsers().subscribe(onNext: { [weak self] usr in
+            guard let self = self else{return}
+            self.userBehaviorRelay.accept(usr)
         }, onError: { error in
-            ///Emit Error to homePublishSubj
-            self.homePublishSubj.onError(error)
-    
-        }).disposed(by: disposeBag)
+            print(error)
+        })
+            
+            .disposed(by: disposeBag)
+        
+        
+        userBehaviorRelay
+            .asObservable()
+            .skip(1)
+            .observe(on: MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] user in
+                guard let self = self , let  id = user?.id else{return}
+                self.fetchAlbumData(userId: id)
+            }).disposed(by: disposeBag)
     }
     
+    func fetchAlbumData(userId:Int){
+        
+        self.apiService.getAlbums(userId: userId).subscribe(onNext: { [weak self] album in
+            guard let self = self else{return}
+            self.albumBehaviorRelay.accept(album)
+        }, onError: { eror in
+            print(eror)
+        }).disposed(by: self.disposeBag)
+        
+        albumBehaviorRelay
+            .asObservable()
+            .skip(1)
+            .observe(on: MainScheduler.asyncInstance)
+            .subscribe(onNext: {[weak self] album in
+                guard let self = self ,
+                      let user = self.userBehaviorRelay.value else{return}
+                self.homePublishSubj.onNext(HomeModel(user: user , albums: album))
+                
+                
+            },onError: {  error in
+                print(error)
+            }).disposed(by: disposeBag)
+        
+    }
+    
+    
+    
+    
 }
+
+
+
+/*
+ //        self.apiService.getAlbums(userId: userBehaviorRelay.value!.id).subscribe(onNext: { [unowned self] album in
+ //            self.homePublishSubj.onNext(HomeModel(user: self.userBehaviorRelay.value!, albums: album))
+ //
+ //        }).disposed(by: disposeBag)
+ 
+ 
+ //         userObservable.flatMap({ [unowned self ] user in
+ //
+ //            self.apiService.getAlbums(userId: user.id)
+ //        }).subscribe(on: ConcurrentDispatchQueueScheduler.init(qos: .background)).observe(on: MainScheduler.asyncInstance).subscribe(onNext: { [unowned self] album in
+ //            self.homePublishSubj.onNext(HomeModel(user: self.userBehaviorRelay.value!, albums: album))
+ //
+ //        }).disposed(by: disposeBag)
+ 
+ 
+ 
+ debugPrint(WalletViewModel.self, #line, error.localizedDescription)
+ */
+
+

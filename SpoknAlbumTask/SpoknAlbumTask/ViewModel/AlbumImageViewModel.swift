@@ -12,15 +12,14 @@ import RxCocoa
 class AlbumImageViewModel {
     
     var apiService :ApiServiceProtocol!
-    var disposeBag :DisposeBag!
+    let disposeBag = DisposeBag()
     lazy var imageBehaviourRelay = BehaviorRelay<[AlbumImage]>(value: [])
-    //lazy var totalAlbumImagesPublishSubj = [AlbumImage]()
     
-    
+
     
     init(apiService :ApiServiceProtocol = NetworkManager()) {
         self.apiService = apiService
-        disposeBag = DisposeBag()
+       
     }
     
     
@@ -31,26 +30,25 @@ class AlbumImageViewModel {
       let imagesObserve = apiService.fetchPhotos(albumId: albumId)
         
         imagesObserve.subscribe(on: ConcurrentDispatchQueueScheduler.init(qos: .background)).observe(on: MainScheduler.asyncInstance).subscribe(onNext: {[weak self] albumImage in
-           
-                 self?.imageBehaviourRelay.accept(albumImage)
+            guard let self = self else {return}
+            
+                 self.imageBehaviourRelay.accept(albumImage)
             
 
              }, onError: { error in
-                 print(error.localizedDescription)
+//                 print(error.localizedDescription)
+                debugPrint(error.localizedDescription)
              }).disposed(by: disposeBag)
 
  
     
     }
         
-    func filteredContacts(with allImages: [AlbumImage], query: String) -> [AlbumImage] {
+    func filteredContacts( query: String) -> [AlbumImage] {
       
-        var filteredContacts = imageBehaviourRelay.value.filter({ query.isEmpty || ($0.imageTitle.lowercased().contains(query.lowercased()))})
+        let filteredContacts = imageBehaviourRelay.value.filter({ query.isEmpty || ($0.imageTitle.lowercased().contains(query.lowercased()))})
         return filteredContacts
-        
-        
-        
-        
+      
     }
     
     

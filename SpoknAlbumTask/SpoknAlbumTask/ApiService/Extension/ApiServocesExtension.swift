@@ -36,7 +36,7 @@ extension ApiServices:TargetType {
         case .user:
             return .requestPlain
             
-        case .albums(let userId) :
+        case .albums( let userId) :
             return .requestParameters(
                 parameters: [
                     "userId": String(userId)

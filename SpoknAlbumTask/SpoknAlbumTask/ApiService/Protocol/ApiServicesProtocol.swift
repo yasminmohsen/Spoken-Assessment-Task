@@ -15,8 +15,8 @@ protocol ApiServiceProtocol {
     
     // MARK: - Functions
     
-    func fetchHomeData()->Observable<HomeModel>
     func fetchPhotos(albumId:Int)->Observable<[AlbumImage]>
-    
+    func getUsers() -> Observable<User>
+    func getAlbums(userId:Int) -> Observable<[Album]> 
     
 }
