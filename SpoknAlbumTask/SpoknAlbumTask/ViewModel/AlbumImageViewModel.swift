@@ -43,19 +43,15 @@ class AlbumImageViewModel {
     
     }
         
+    func filteredContacts(with allContacts: [AlbumImage], query: String) -> [AlbumImage] {
+      
+        var filteredContacts = imageBehaviourRelay.value.filter({ query.isEmpty || ($0.imageTitle.lowercased().contains(query.lowercased()))})
+        return filteredContacts
         
-//    func filterimageArray(imageTitle:String){
-//        
-//        let filteredArr = totalAlbumImagesPublishSubj.filter({$0.imageTitle.lowercased() == imageTitle.lowercased()})
-//        albumImagesPublishSubj.onNext(filteredArr)
-//
-//            
-//      
-//        
-//        
-//    }
-    
-    
+        
+        
+        
+    }
     
     
 }

@@ -37,8 +37,7 @@ class HomeViewController: UIViewController {
     
     
     func setUpObserver(){
-        albumTableView.delegate = nil
-        albumTableView.dataSource = nil
+        
         homeViewModel.homePublishSubj.map {return $0.user.name}.bind(to: userNamelabel.rx.text).disposed(by: disposeBag)
         
         homeViewModel.homePublishSubj.map {return "\($0.user.address.street),\($0.user.address.suite),\($0.user.address.city)"}.bind(to:userAddressLabel.rx.text).disposed(by: disposeBag)
@@ -65,9 +64,6 @@ class HomeViewController: UIViewController {
         
     
         }
-    
-    
-    
-   
+  
 }
 

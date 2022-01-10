@@ -29,36 +29,29 @@ class AlbumImageViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         setUpUi()
         disposeBag = DisposeBag()
-        setUpObserver()
+        bindViewModel()
         albumImageViewModel.fetchImages(albumId: albumId)
     }
 
-    
-    func setUpObserver(){
-        imageCollectionView.delegate = nil
-        imageCollectionView.dataSource = nil
-  
-      
-//        albumImageViewModel.imageBehaviourRelay.subscribe(onNext: {  [self] imag in
-//
-//        }).disposed(by: disposeBag)
-//
+ 
+    func bindViewModel(){
         
         
-        searchBar.rx.text.orEmpty.debounce(.milliseconds(100), scheduler: MainScheduler.asyncInstance).map({ query in
+        let query = searchBar.rx.text
+                .orEmpty
+                .distinctUntilChanged()
 
-         self.albumImageViewModel.imageBehaviourRelay.value.filter({ query.isEmpty || ($0.imageTitle.lowercased().contains(query.lowercased()))})
-
-
-        }).bind(to: imageCollectionView.rx.items(cellIdentifier: "cell", cellType: AlbumImageCollectionViewCell.self)){ row , item ,cell in
+        Observable.combineLatest(albumImageViewModel.imageBehaviourRelay, query) { [unowned self] (allContacts, query) -> [AlbumImage] in
+            return self.albumImageViewModel.filteredContacts(with: allContacts, query: query)
+                }
+        .bind(to: imageCollectionView.rx.items(cellIdentifier: "cell", cellType: AlbumImageCollectionViewCell.self)){ row , item ,cell in
             cell.configuralbumImageCell(albumImageObj: item)
     }.disposed(by: disposeBag)
 
+        }
    
     }
-}
-
-
+    
 
 
 extension AlbumImageViewController {
@@ -85,8 +78,6 @@ extension AlbumImageViewController {
          
          
          let layout = UICollectionViewCompositionalLayout(section: section)
-         
-         
          
          imageCollectionView.collectionViewLayout = layout
          imageCollectionView.setNeedsLayout()
