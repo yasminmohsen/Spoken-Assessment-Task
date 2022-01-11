@@ -11,4 +11,5 @@ enum ApiServices {
     case user
     case albums(userId:Int)
     case images (albumId:Int)
+   
 }

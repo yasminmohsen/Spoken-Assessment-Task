@@ -11,10 +11,10 @@ import Moya
 // MARK: - Add Moya Configurations
 
 extension ApiServices:TargetType {
+    
     var baseURL: URL {
         return URL(string: "https://jsonplaceholder.typicode.com")!
     }
-    
     var path: String {
         switch self {
         case .user:
@@ -54,5 +54,43 @@ extension ApiServices:TargetType {
     var headers: [String : String]? {
         return nil
     }
+    
+ 
+    
+    var sampleData: Data {
+        
+        switch self{
+        case .user :
+    
+            return stubGenerator(fileName: "Users")
+            
+        case .albums :
+        
+            return stubGenerator(fileName: "Albums")
+            
+        case .images :
+        
+            return stubGenerator(fileName: "Images")
+        
+        }
+        
+       
+        
+             
+    }
+    
+ 
+    private func stubGenerator(fileName:String) -> Data{
+   
+            guard let path = Bundle.main.path(forResource: "\(fileName)", ofType: "json"),
+                  let data = try? Data(contentsOf: URL(fileURLWithPath: path)) else {
+                      return Data()
+              }
+            return data
+            
+       
+    }
+    
+    
 }
 

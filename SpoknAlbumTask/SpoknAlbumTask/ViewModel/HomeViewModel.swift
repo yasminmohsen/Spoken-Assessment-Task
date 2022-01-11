@@ -11,7 +11,7 @@ import RxCocoa
 class HomeViewModel {
     
     //MARK: - Proprties
-    private var apiService :ApiServiceProtocol!
+    public var apiService :ApiServiceProtocol!
     private let disposeBag = DisposeBag()
     private lazy var userBehaviorRelay = BehaviorRelay<User?>(value: nil)
     private lazy var albumBehaviorRelay = BehaviorRelay<[Album]>(value: [])
