@@ -148,5 +148,325 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "274329B2-7877-4F9A-AB99-F070EE879D1D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "fetchAlbumData(userId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "772CB219-FDEC-4815-85D3-2F47714E901D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "fetchHomeData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "772CB219-FDEC-4815-85D3-2F47714E901D - e9b79eb30318df6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpoknAlbumTask.HomeViewModel.fetchHomeData() -&gt; ()"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "75">
+               </Location>
+               <Location
+                  uuid = "772CB219-FDEC-4815-85D3-2F47714E901D - 776febc04839e3e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SpoknAlbumTask.User) -&gt; () in SpoknAlbumTask.HomeViewModel.fetchHomeData() -&gt; ()"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "146">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "81228B00-95B3-40BC-AAEA-020882A74572"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "fetchHomeData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "350EF1A0-FC90-43EC-ADE9-CBC4C34855E7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "fetchHomeData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DF4F0C63-CF6F-4177-BDA2-847201C176FB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "fetchHomeData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DF4F0C63-CF6F-4177-BDA2-847201C176FB - 776febc04839e37a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SpoknAlbumTask.User) -&gt; () in SpoknAlbumTask.HomeViewModel.fetchHomeData() -&gt; ()"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "1520">
+               </Location>
+               <Location
+                  uuid = "DF4F0C63-CF6F-4177-BDA2-847201C176FB - 4e495b275bbed594"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Error) -&gt; () in SpoknAlbumTask.HomeViewModel.fetchHomeData() -&gt; ()"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "26">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A0E025B-351D-4188-AC6D-94EA8780E5D9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "fetchHomeData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6A0E025B-351D-4188-AC6D-94EA8780E5D9 - e9b79eb30318de33"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpoknAlbumTask.HomeViewModel.fetchHomeData() -&gt; ()"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "832">
+               </Location>
+               <Location
+                  uuid = "6A0E025B-351D-4188-AC6D-94EA8780E5D9 - 4e495b275bbed456"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Error) -&gt; () in SpoknAlbumTask.HomeViewModel.fetchHomeData() -&gt; ()"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "115">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B2D44EDF-3F4A-4CB3-A5F0-2E2337779553"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Modules/ViewControllers/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "bindViewModel()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B2D44EDF-3F4A-4CB3-A5F0-2E2337779553 - 7eb7b8e9b9526470"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpoknAlbumTask.HomeViewController.bindViewModel() -&gt; ()"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/ViewControllers/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "5067">
+               </Location>
+               <Location
+                  uuid = "B2D44EDF-3F4A-4CB3-A5F0-2E2337779553 - 77305b87a08069d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #7 (Swift.Error) -&gt; () in SpoknAlbumTask.HomeViewController.bindViewModel() -&gt; ()"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/ViewControllers/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0741C5F3-1F37-4421-B0A8-6639661ADEA2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Modules/ViewControllers/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "bindViewModel()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0741C5F3-1F37-4421-B0A8-6639661ADEA2 - 7eb7b8e9b9526432"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpoknAlbumTask.HomeViewController.bindViewModel() -&gt; ()"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/ViewControllers/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "5796">
+               </Location>
+               <Location
+                  uuid = "0741C5F3-1F37-4421-B0A8-6639661ADEA2 - 77305b87a0806990"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #7 (Swift.Error) -&gt; () in SpoknAlbumTask.HomeViewController.bindViewModel() -&gt; ()"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/ViewControllers/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "769">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8FF2CEC6-681D-4A9D-BE55-13F506C19DC5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "fetchHomeData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F0AB5714-FE30-47A1-895B-D8552649B470"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "fetchHomeData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

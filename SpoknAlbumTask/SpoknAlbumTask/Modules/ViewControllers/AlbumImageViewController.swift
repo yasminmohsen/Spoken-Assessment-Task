@@ -24,6 +24,7 @@ class AlbumImageViewController: UIViewController {
         super.viewDidLoad()
         setUpUi()
         bindViewModel()
+        setupActionObserves()
         ///Call ViewModel Fetching Func To Fetch Images  From Api
         albumImageViewModel.fetchImages(albumId: albumId)
     }
@@ -51,6 +52,21 @@ class AlbumImageViewController: UIViewController {
         }.disposed(by: disposeBag)
         
     }
+    
+  
+    func setupActionObserves(){
+        
+        imageCollectionView.rx.modelSelected(AlbumImage.self).subscribe(onNext: { [weak self ] img in
+            guard let self = self else {return}
+            if let imageViewerVC = self.storyboard?.instantiateViewController(identifier: "imageViewerVc")as?ImageViewerViewController{
+                imageViewerVC.singleImage = img
+                self.present(imageViewerVC, animated: true)
+            
+            }}).disposed(by: disposeBag)
+        
+        
+    }
+    
     
 }
 

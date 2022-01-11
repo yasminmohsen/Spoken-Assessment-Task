@@ -14,6 +14,8 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var userNamelabel: UILabel!
     @IBOutlet private weak var userAddressLabel: UILabel!
     @IBOutlet private weak var userZipCodeLabel: UILabel!
+    
+    @IBOutlet weak var myAlbumsLabel: UILabel!
     @IBOutlet private weak var albumTableView: UITableView!
     
     //MARK: - Properties
@@ -65,7 +67,11 @@ class HomeViewController: UIViewController {
            if let albumImgVC = self.storyboard?.instantiateViewController(identifier: "AlbumImgVC")as?AlbumImageViewController{
             albumImgVC.albumId = albm.albumID
             self.navigationController?.pushViewController(albumImgVC, animated: true)
-             }}).disposed(by: disposeBag)
+           }}).disposed(by: disposeBag)
+        
+        homeViewModel.homePublishSubj.subscribe(onError: { error in
+                print("****\(error.localizedDescription)")
+        }).disposed(by: disposeBag)
         
     }
 }

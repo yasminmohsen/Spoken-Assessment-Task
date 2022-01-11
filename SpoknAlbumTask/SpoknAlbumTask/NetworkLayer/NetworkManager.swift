@@ -10,12 +10,7 @@ import Moya
 import RxSwift
 import RxMoya
 class NetworkManager: ApiServiceProtocol {
-   
-    
-    
-    
-    
-    
+
  var provider : MoyaProvider<ApiServices> = MoyaProvider<ApiServices>()
     
     

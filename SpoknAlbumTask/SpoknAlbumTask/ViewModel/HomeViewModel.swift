@@ -30,10 +30,8 @@ class HomeViewModel {
             guard let self = self else{return}
             self.userBehaviorRelay.accept(usr)
         }, onError: { error in
-            print(error)
-        })
-            
-            .disposed(by: disposeBag)
+          
+        }).disposed(by: disposeBag)
         
         
         userBehaviorRelay
@@ -46,13 +44,14 @@ class HomeViewModel {
             }).disposed(by: disposeBag)
     }
     
+    //MARK: - Fetching AlbumData From Api
     func fetchAlbumData(userId:Int){
         
         self.apiService.getAlbums(userId: userId).subscribe(onNext: { [weak self] album in
             guard let self = self else{return}
             self.albumBehaviorRelay.accept(album)
-        }, onError: { eror in
-            print(eror)
+        }, onError: { error -> Void in
+          
         }).disposed(by: self.disposeBag)
         
         albumBehaviorRelay
@@ -63,10 +62,6 @@ class HomeViewModel {
                 guard let self = self ,
                       let user = self.userBehaviorRelay.value else{return}
                 self.homePublishSubj.onNext(HomeModel(user: user , albums: album))
-                
-                
-            },onError: {  error in
-                print(error)
             }).disposed(by: disposeBag)
         
     }
