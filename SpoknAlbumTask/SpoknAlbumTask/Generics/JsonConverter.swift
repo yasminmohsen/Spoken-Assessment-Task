@@ -7,6 +7,7 @@
 
 
 import Foundation
+import UIKit
 
 // MARK: - Add Stand-alone Function to Convert From JSON To Any Data Model
 
@@ -25,3 +26,7 @@ func jsonConverterToModel<T:Codable>(data :Data)-> T?{
     return nil
     
 }
+
+
+    
+

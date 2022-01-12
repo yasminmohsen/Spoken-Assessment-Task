@@ -41,6 +41,9 @@
 		6C3ADD2F278B5CBD000418EC /* AlbumImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3ADD2E278B5CBD000418EC /* AlbumImageViewModel.swift */; };
 		6C886CA5278E17CD00FEAA72 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C886CA4278E17CD00FEAA72 /* ImageViewerViewController.swift */; };
 		6C886CA7278E21F300FEAA72 /* ExtensionImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C886CA6278E21F300FEAA72 /* ExtensionImageViewerViewController.swift */; };
+		6C886CAA278E286100FEAA72 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 6C886CA9278E286100FEAA72 /* SkeletonView */; };
+		6C886CAC278EF01800FEAA72 /* ExtensionHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C886CAB278EF01800FEAA72 /* ExtensionHomeViewController.swift */; };
+		6C886CAE278EF31000FEAA72 /* SkeltonAppearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C886CAD278EF31000FEAA72 /* SkeltonAppearence.swift */; };
 		6CC5AC99278CBA6800CC778E /* ExtensionAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC5AC98278CBA6800CC778E /* ExtensionAlbumViewController.swift */; };
 		6CC5AC9E278D72BE00CC778E /* Users.json in Resources */ = {isa = PBXBuildFile; fileRef = 6CC5AC9D278D72BE00CC778E /* Users.json */; };
 		6CC5ACA0278D730800CC778E /* Albums.json in Resources */ = {isa = PBXBuildFile; fileRef = 6CC5AC9F278D730800CC778E /* Albums.json */; };
@@ -99,6 +102,8 @@
 		6C3ADD2E278B5CBD000418EC /* AlbumImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumImageViewModel.swift; sourceTree = "<group>"; };
 		6C886CA4278E17CD00FEAA72 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		6C886CA6278E21F300FEAA72 /* ExtensionImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionImageViewerViewController.swift; sourceTree = "<group>"; };
+		6C886CAB278EF01800FEAA72 /* ExtensionHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHomeViewController.swift; sourceTree = "<group>"; };
+		6C886CAD278EF31000FEAA72 /* SkeltonAppearence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeltonAppearence.swift; sourceTree = "<group>"; };
 		6CC5AC98278CBA6800CC778E /* ExtensionAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionAlbumViewController.swift; sourceTree = "<group>"; };
 		6CC5AC9D278D72BE00CC778E /* Users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Users.json; sourceTree = "<group>"; };
 		6CC5AC9F278D730800CC778E /* Albums.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Albums.json; sourceTree = "<group>"; };
@@ -119,6 +124,7 @@
 				6C3ADD04278B3A25000418EC /* Kingfisher in Frameworks */,
 				6C3ADCFB278B394C000418EC /* CombineMoya in Frameworks */,
 				6C3ADCFF278B394C000418EC /* Moya in Frameworks */,
+				6C886CAA278E286100FEAA72 /* SkeletonView in Frameworks */,
 				6C3ADCEE278B380D000418EC /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				6C3ADD0D278B3B62000418EC /* JsonConverter.swift */,
+				6C886CAD278EF31000FEAA72 /* SkeltonAppearence.swift */,
 			);
 			path = Generics;
 			sourceTree = "<group>";
@@ -304,6 +311,7 @@
 		6CC5AC95278CB94D00CC778E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				6C886CAB278EF01800FEAA72 /* ExtensionHomeViewController.swift */,
 				6CC5AC98278CBA6800CC778E /* ExtensionAlbumViewController.swift */,
 				6C886CA6278E21F300FEAA72 /* ExtensionImageViewerViewController.swift */,
 			);
@@ -370,6 +378,7 @@
 				6C3ADCFC278B394C000418EC /* RxMoya */,
 				6C3ADCFE278B394C000418EC /* Moya */,
 				6C3ADD03278B3A25000418EC /* Kingfisher */,
+				6C886CA9278E286100FEAA72 /* SkeletonView */,
 			);
 			productName = SpoknAlbumTask;
 			productReference = 6C3ADCB6278B37A3000418EC /* SpoknAlbumTask.app */;
@@ -450,6 +459,7 @@
 				6C3ADCEC278B380D000418EC /* XCRemoteSwiftPackageReference "RxSwift" */,
 				6C3ADCF7278B394C000418EC /* XCRemoteSwiftPackageReference "Moya" */,
 				6C3ADD02278B3A25000418EC /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				6C886CA8278E286100FEAA72 /* XCRemoteSwiftPackageReference "SkeletonView" */,
 			);
 			productRefGroup = 6C3ADCB7278B37A3000418EC /* Products */;
 			projectDirPath = "";
@@ -505,6 +515,7 @@
 				6C3ADD2F278B5CBD000418EC /* AlbumImageViewModel.swift in Sources */,
 				6C3ADD1E278B3C86000418EC /* HomeUserModel.swift in Sources */,
 				6C3ADD24278B3DCB000418EC /* HomeViewController.swift in Sources */,
+				6C886CAC278EF01800FEAA72 /* ExtensionHomeViewController.swift in Sources */,
 				6C3ADD0E278B3B62000418EC /* JsonConverter.swift in Sources */,
 				6C3ADD16278B3C1D000418EC /* ApiServicesProtocol.swift in Sources */,
 				6C3ADD2D278B5C63000418EC /* AlbumImageViewController.swift in Sources */,
@@ -513,6 +524,7 @@
 				6C3ADD22278B3D9F000418EC /* HomeViewModel.swift in Sources */,
 				6CC5AC99278CBA6800CC778E /* ExtensionAlbumViewController.swift in Sources */,
 				6C3ADCC4278B37A3000418EC /* SpoknAlbumTask.xcdatamodeld in Sources */,
+				6C886CAE278EF31000FEAA72 /* SkeltonAppearence.swift in Sources */,
 				6C3ADD1C278B3C77000418EC /* AlbumImage.swift in Sources */,
 				6C3ADD18278B3C5D000418EC /* UserModel.swift in Sources */,
 				6C3ADD27278B3DF3000418EC /* HomeTableViewCell.swift in Sources */,
@@ -872,6 +884,14 @@
 				minimumVersion = 7.1.2;
 			};
 		};
+		6C886CA8278E286100FEAA72 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.29.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -919,6 +939,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6C3ADD02278B3A25000418EC /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		6C886CA9278E286100FEAA72 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C886CA8278E286100FEAA72 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
 		};
 		6CC5ACAB278D778D00CC778E /* RxBlocking */ = {
 			isa = XCSwiftPackageProductDependency;

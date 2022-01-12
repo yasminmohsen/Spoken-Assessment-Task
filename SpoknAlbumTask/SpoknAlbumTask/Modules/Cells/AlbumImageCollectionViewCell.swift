@@ -17,8 +17,10 @@ class AlbumImageCollectionViewCell: UICollectionViewCell {
     {
         let url = URL(string: albumImageObj.imageURL)
         albumImage.kf.setImage(with: url)
-        
-        
-        
+     
+    }
+    func startAnimateSkeltonCell(){
+        let skeltonViewsArray :[UIView] = [albumImage]
+        startSkelton(skeltonViewsArray)
     }
 }

@@ -7,7 +7,22 @@
 
 import Foundation
 import UIKit
-extension AlbumImageViewController {
+extension AlbumImageViewController: UICollectionViewDelegate,UICollectionViewDataSource{
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! AlbumImageCollectionViewCell
+        
+        cell.startAnimateSkeltonCell()
+        
+        return cell
+    }
+    
     
     
     func setUpUi(){
@@ -33,6 +48,7 @@ extension AlbumImageViewController {
          let layout = UICollectionViewCompositionalLayout(section: section)
          
          imageCollectionView.collectionViewLayout = layout
+        overLayCollectionView.collectionViewLayout = layout
          imageCollectionView.setNeedsLayout()
     }
     

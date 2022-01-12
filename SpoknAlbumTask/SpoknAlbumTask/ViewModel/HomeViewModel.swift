@@ -16,6 +16,7 @@ class HomeViewModel {
     private lazy var userBehaviorRelay = BehaviorRelay<User?>(value: nil)
     private lazy var albumBehaviorRelay = BehaviorRelay<[Album]>(value: [])
     lazy var homePublishSubj = PublishSubject<HomeModel>()
+    lazy var isLoadingBehaviourRelay =  BehaviorRelay<Bool>(value: true)
    
     init(apiService :ApiServiceProtocol = NetworkManager()) {
         self.apiService = apiService
@@ -25,7 +26,7 @@ class HomeViewModel {
     //MARK: - Fetching HomeData From Api
     
     func fetchHomeData(){
-        
+        isLoadingBehaviourRelay.accept(true)
         apiService.getUsers().subscribe(onNext: { [weak self] usr in
             guard let self = self else{return}
             self.userBehaviorRelay.accept(usr)
@@ -61,6 +62,7 @@ class HomeViewModel {
             .subscribe(onNext: {[weak self] album in
                 guard let self = self ,
                       let user = self.userBehaviorRelay.value else{return}
+                self.isLoadingBehaviourRelay.accept(false)
                 self.homePublishSubj.onNext(HomeModel(user: user , albums: album))
             }).disposed(by: disposeBag)
         

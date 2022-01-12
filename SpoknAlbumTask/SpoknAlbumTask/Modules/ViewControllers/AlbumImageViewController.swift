@@ -13,25 +13,41 @@ class AlbumImageViewController: UIViewController {
     //MARK: - Outlets
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var imageCollectionView: UICollectionView!
+    @IBOutlet weak var overLayCollectionView: UICollectionView!
     
     //MARK: - Properties
     lazy var albumImageViewModel = AlbumImageViewModel()
     private let disposeBag = DisposeBag()
     var albumId :Int!
+    var albumTitle :String!
     
     //MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = albumTitle
         setUpUi()
         bindViewModel()
         setupActionObserves()
         ///Call ViewModel Fetching Func To Fetch Images  From Api
-        albumImageViewModel.fetchImages(albumId: albumId)
+        albumImageViewModel.fetchImages(albumId: albumId!)
     }
     
     
     
     func bindViewModel(){
+        
+        albumImageViewModel.isLoadingBehaviourRelay.skip(1).subscribe(onNext: { [weak self] isLoading in
+            guard let self = self else {return}
+            if(!isLoading){
+                UIView.animate(withDuration:2) {
+                    self.overLayCollectionView.alpha = 0
+                }
+            }
+        }).disposed(by: disposeBag)
+        
+        
+    
+        
         
         ///1- get the search query from searchText
         let query = searchBar

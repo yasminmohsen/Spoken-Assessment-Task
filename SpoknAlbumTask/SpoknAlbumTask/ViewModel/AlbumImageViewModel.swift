@@ -14,7 +14,7 @@ class AlbumImageViewModel {
     var apiService :ApiServiceProtocol!
     let disposeBag = DisposeBag()
     lazy var imageBehaviourRelay = BehaviorRelay<[AlbumImage]>(value: [])
-    
+    lazy var isLoadingBehaviourRelay =  BehaviorRelay<Bool>(value: true)
 
     
     init(apiService :ApiServiceProtocol = NetworkManager()) {
@@ -26,13 +26,14 @@ class AlbumImageViewModel {
     
     
     func fetchImages(albumId:Int){
-        
+    isLoadingBehaviourRelay.accept(true)
       let imagesObserve = apiService.fetchPhotos(albumId: albumId)
         
         imagesObserve.subscribe(on: ConcurrentDispatchQueueScheduler.init(qos: .background)).observe(on: MainScheduler.asyncInstance).subscribe(onNext: {[weak self] albumImage in
             guard let self = self else {return}
             
                  self.imageBehaviourRelay.accept(albumImage)
+            self.isLoadingBehaviourRelay.accept(false)
             
 
              }, onError: { error in
