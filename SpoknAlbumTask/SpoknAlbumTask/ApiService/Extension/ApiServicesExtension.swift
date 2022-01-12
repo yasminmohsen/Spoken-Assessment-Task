@@ -55,42 +55,32 @@ extension ApiServices:TargetType {
         return nil
     }
     
- 
+    // MARK: - Add Moya Configurations For Testing
     
     var sampleData: Data {
         
         switch self{
         case .user :
-    
             return stubGenerator(fileName: "Users")
             
         case .albums :
-        
             return stubGenerator(fileName: "Albums")
             
         case .images :
-        
             return stubGenerator(fileName: "Images")
-        
+            
         }
         
-       
-        
-             
     }
     
- 
+    
     private func stubGenerator(fileName:String) -> Data{
-   
-            guard let path = Bundle.main.path(forResource: "\(fileName)", ofType: "json"),
-                  let data = try? Data(contentsOf: URL(fileURLWithPath: path)) else {
-                      return Data()
-              }
-            return data
-            
-       
+        
+        guard let path = Bundle.main.path(forResource: "\(fileName)", ofType: "json"),
+              let data = try? Data(contentsOf: URL(fileURLWithPath: path)) else { return Data()}
+        return data
+        
     }
-    
     
 }
 

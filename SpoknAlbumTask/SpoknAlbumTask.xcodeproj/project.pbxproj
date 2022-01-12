@@ -44,6 +44,7 @@
 		6C886CAA278E286100FEAA72 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 6C886CA9278E286100FEAA72 /* SkeletonView */; };
 		6C886CAC278EF01800FEAA72 /* ExtensionHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C886CAB278EF01800FEAA72 /* ExtensionHomeViewController.swift */; };
 		6C886CAE278EF31000FEAA72 /* SkeltonAppearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C886CAD278EF31000FEAA72 /* SkeltonAppearence.swift */; };
+		6C886CB0278F42B600FEAA72 /* AlbumImageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C886CAF278F42B600FEAA72 /* AlbumImageViewModelTests.swift */; };
 		6CC5AC99278CBA6800CC778E /* ExtensionAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC5AC98278CBA6800CC778E /* ExtensionAlbumViewController.swift */; };
 		6CC5AC9E278D72BE00CC778E /* Users.json in Resources */ = {isa = PBXBuildFile; fileRef = 6CC5AC9D278D72BE00CC778E /* Users.json */; };
 		6CC5ACA0278D730800CC778E /* Albums.json in Resources */ = {isa = PBXBuildFile; fileRef = 6CC5AC9F278D730800CC778E /* Albums.json */; };
@@ -104,6 +105,7 @@
 		6C886CA6278E21F300FEAA72 /* ExtensionImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionImageViewerViewController.swift; sourceTree = "<group>"; };
 		6C886CAB278EF01800FEAA72 /* ExtensionHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHomeViewController.swift; sourceTree = "<group>"; };
 		6C886CAD278EF31000FEAA72 /* SkeltonAppearence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeltonAppearence.swift; sourceTree = "<group>"; };
+		6C886CAF278F42B600FEAA72 /* AlbumImageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumImageViewModelTests.swift; sourceTree = "<group>"; };
 		6CC5AC98278CBA6800CC778E /* ExtensionAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionAlbumViewController.swift; sourceTree = "<group>"; };
 		6CC5AC9D278D72BE00CC778E /* Users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Users.json; sourceTree = "<group>"; };
 		6CC5AC9F278D730800CC778E /* Albums.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Albums.json; sourceTree = "<group>"; };
@@ -172,12 +174,13 @@
 		6C3ADCB8278B37A3000418EC /* SpoknAlbumTask */ = {
 			isa = PBXGroup;
 			children = (
+				6C3ADCB9278B37A3000418EC /* AppDelegate.swift */,
+				6C3ADCBB278B37A3000418EC /* SceneDelegate.swift */,
 				6CC5AC92278C2B2A00CC778E /* Other */,
-				6C3ADD0A278B3A81000418EC /* Generics */,
+				6C3ADD0A278B3A81000418EC /* Commons */,
 				6C3ADD09278B3A7D000418EC /* ApiService */,
 				6C3ADD06278B3A61000418EC /* NetworkLayer */,
 				6C3ADD08278B3A67000418EC /* Model */,
-				6C3ADD07278B3A64000418EC /* ViewModel */,
 				6C3ADD05278B3A5E000418EC /* Modules */,
 				6CC5AC91278C2AE700CC778E /* View */,
 				6CC5ACA3278D740600CC778E /* Stubs */,
@@ -211,9 +214,10 @@
 		6C3ADD05278B3A5E000418EC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6C886CBD278F506700FEAA72 /* ImageViewer */,
+				6C886CB6278F4F8D00FEAA72 /* AlbumImage */,
+				6C886CB1278F4E7200FEAA72 /* Home */,
 				6CC5AC9A278CBA8800CC778E /* ViewControllers */,
-				6CC5AC95278CB94D00CC778E /* Extension */,
-				6C3ADD25278B3DD6000418EC /* Cells */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -226,22 +230,9 @@
 			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
-		6C3ADD07278B3A64000418EC /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				6C3ADD21278B3D9F000418EC /* HomeViewModel.swift */,
-				6C3ADD2E278B5CBD000418EC /* AlbumImageViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		6C3ADD08278B3A67000418EC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6C3ADD17278B3C5D000418EC /* UserModel.swift */,
-				6C3ADD19278B3C69000418EC /* AlbumModel.swift */,
-				6C3ADD1B278B3C77000418EC /* AlbumImage.swift */,
-				6C3ADD1D278B3C86000418EC /* HomeUserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -256,13 +247,13 @@
 			path = ApiService;
 			sourceTree = "<group>";
 		};
-		6C3ADD0A278B3A81000418EC /* Generics */ = {
+		6C3ADD0A278B3A81000418EC /* Commons */ = {
 			isa = PBXGroup;
 			children = (
 				6C3ADD0D278B3B62000418EC /* JsonConverter.swift */,
 				6C886CAD278EF31000FEAA72 /* SkeltonAppearence.swift */,
 			);
-			path = Generics;
+			path = Commons;
 			sourceTree = "<group>";
 		};
 		6C3ADD0F278B3B6F000418EC /* Extension */ = {
@@ -281,13 +272,119 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		6C3ADD25278B3DD6000418EC /* Cells */ = {
+		6C886CB1278F4E7200FEAA72 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6C886CB4278F4F3800FEAA72 /* Data */,
+				6C886CB2278F4E8400FEAA72 /* Presentation */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6C886CB2278F4E8400FEAA72 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				6C886CB9278F4FD500FEAA72 /* Cells */,
+				6C3ADD23278B3DCB000418EC /* HomeViewController.swift */,
+				6C3ADD21278B3D9F000418EC /* HomeViewModel.swift */,
+				6C886CB3278F4EC600FEAA72 /* Extension */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		6C886CB3278F4EC600FEAA72 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6C886CAB278EF01800FEAA72 /* ExtensionHomeViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		6C886CB4278F4F3800FEAA72 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6C886CB5278F4F4A00FEAA72 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		6C886CB5278F4F4A00FEAA72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C3ADD17278B3C5D000418EC /* UserModel.swift */,
+				6C3ADD19278B3C69000418EC /* AlbumModel.swift */,
+				6C3ADD1D278B3C86000418EC /* HomeUserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6C886CB6278F4F8D00FEAA72 /* AlbumImage */ = {
+			isa = PBXGroup;
+			children = (
+				6C886CBC278F501400FEAA72 /* Data */,
+				6C886CB7278F4FA800FEAA72 /* Presentation */,
+			);
+			path = AlbumImage;
+			sourceTree = "<group>";
+		};
+		6C886CB7278F4FA800FEAA72 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				6C886CBA278F4FF000FEAA72 /* Cells */,
+				6C886CB8278F4FB700FEAA72 /* Extension */,
+				6C3ADD2E278B5CBD000418EC /* AlbumImageViewModel.swift */,
+				6C3ADD2C278B5C63000418EC /* AlbumImageViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		6C886CB8278F4FB700FEAA72 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6CC5AC98278CBA6800CC778E /* ExtensionAlbumViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		6C886CB9278F4FD500FEAA72 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				6C3ADD26278B3DF3000418EC /* HomeTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6C886CBA278F4FF000FEAA72 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
 				6C3ADD2A278B5B5E000418EC /* AlbumImageCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		6C886CBC278F501400FEAA72 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6C3ADD1B278B3C77000418EC /* AlbumImage.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		6C886CBD278F506700FEAA72 /* ImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				6C886CBE278F507C00FEAA72 /* Presentation */,
+			);
+			path = ImageViewer;
+			sourceTree = "<group>";
+		};
+		6C886CBE278F507C00FEAA72 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				6CC5AC95278CB94D00CC778E /* Extension */,
+				6C886CA4278E17CD00FEAA72 /* ImageViewerViewController.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		6CC5AC91278C2AE700CC778E /* View */ = {
@@ -302,8 +399,6 @@
 		6CC5AC92278C2B2A00CC778E /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				6C3ADCB9278B37A3000418EC /* AppDelegate.swift */,
-				6C3ADCBB278B37A3000418EC /* SceneDelegate.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -311,8 +406,6 @@
 		6CC5AC95278CB94D00CC778E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				6C886CAB278EF01800FEAA72 /* ExtensionHomeViewController.swift */,
-				6CC5AC98278CBA6800CC778E /* ExtensionAlbumViewController.swift */,
 				6C886CA6278E21F300FEAA72 /* ExtensionImageViewerViewController.swift */,
 			);
 			path = Extension;
@@ -321,9 +414,6 @@
 		6CC5AC9A278CBA8800CC778E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6C3ADD23278B3DCB000418EC /* HomeViewController.swift */,
-				6C3ADD2C278B5C63000418EC /* AlbumImageViewController.swift */,
-				6C886CA4278E17CD00FEAA72 /* ImageViewerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -349,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				6CC5ACA4278D752700CC778E /* MockingNetworkManager.swift */,
+				6C886CAF278F42B600FEAA72 /* AlbumImageViewModelTests.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -537,6 +628,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C886CB0278F42B600FEAA72 /* AlbumImageViewModelTests.swift in Sources */,
 				6C3ADCD4278B37A7000418EC /* SpoknAlbumTaskTests.swift in Sources */,
 				6CC5ACA5278D752700CC778E /* MockingNetworkManager.swift in Sources */,
 				6CC5ACB0278D83AA00CC778E /* HomeViewModelTests.swift in Sources */,

@@ -7,8 +7,8 @@
 
 import Foundation
 import UIKit
+
 extension AlbumImageViewController: UICollectionViewDelegate,UICollectionViewDataSource{
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
@@ -27,24 +27,33 @@ extension AlbumImageViewController: UICollectionViewDelegate,UICollectionViewDat
     
     func setUpUi(){
         
-        let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
-         
-         item.contentInsets = NSDirectionalEdgeInsets(top: 1, leading: 2, bottom: 1, trailing: 2)
+        let count:Double = Double(countBehaviourRelay.value > 0 ? countBehaviourRelay.value : 9)
+        var fracHeight:Double = 1/3
+        var itemFracWidth :Double = 1/3
+   
+        switch count {
+        case 1:
+            itemFracWidth = 1/2
+        case 2:
+            fracHeight = 1 / 2
+            itemFracWidth = 1/2
+        default:
+            fracHeight = 1 / 3
+            itemFracWidth = 1/3
 
+        }
+        
+        
+    
+        
+        let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(CGFloat(itemFracWidth)), heightDimension: .fractionalHeight(1)))
+        let horizontlGgroup = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(CGFloat((fracHeight)))),subitems:[item])
          
-         let horizontlGgroup = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1)), subitem: item, count: 1)
+        
+        horizontlGgroup.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
          
-         
-         let verticalGroup = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1)), subitem: item, count: 2)
-         
-         
-         let mainGroup = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.5)), subitems: [horizontlGgroup,verticalGroup])
-         
-         
-         
-         let section = NSCollectionLayoutSection(group: mainGroup)
-         
-         
+         let section = NSCollectionLayoutSection(group: horizontlGgroup)
+    
          let layout = UICollectionViewCompositionalLayout(section: section)
          
          imageCollectionView.collectionViewLayout = layout

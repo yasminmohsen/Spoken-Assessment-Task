@@ -15,13 +15,13 @@ class NetworkManager: ApiServiceProtocol {
     
     
     // MARK: - getUsers Function Implementation
-    func getUsers() -> Observable<User> {
+    func fetchUsers() -> Observable<User> {
         
-        return provider.rx.request(.user).filterSuccessfulStatusCodes().map([User].self).map({return $0.randomElement()!}).asObservable()
+        return provider.rx.request(.user).filterSuccessfulStatusCodes().map([User].self).map({return $0[0]}).asObservable()
     }
     
     // MARK: - getAlbums Function Implementation
-    func getAlbums(userId:Int) -> Observable<[Album]> {
+    func fetchAlbums(userId:Int) -> Observable<[Album]> {
         
         return provider.rx.request(.albums(userId: userId)).filterSuccessfulStatusCodes().map([Album].self).asObservable()
     }

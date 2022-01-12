@@ -34,7 +34,7 @@ class HomeViewModelTests: XCTestCase {
     
     func testSucessfullFtechingUsers(){
         homeViewModel?
-            .apiService.getUsers()
+            .apiService.fetchUsers()
             .subscribe(onNext: { user in
                 XCTAssertNotNil(user)
             }, onError: { error in
@@ -48,7 +48,7 @@ class HomeViewModelTests: XCTestCase {
         mockingNetworkManager?.shouldReturnError = true
         
         homeViewModel?
-            .apiService.getUsers()
+            .apiService.fetchUsers()
             .subscribe(onNext: { album in
                 XCTFail()
             }, onError: { error in
@@ -62,7 +62,7 @@ class HomeViewModelTests: XCTestCase {
     func testSucessfullFtechingAlbumData(){
         homeViewModel?
             .apiService
-            .getAlbums(userId: 0)
+            .fetchAlbums(userId: 0)
             .subscribe(onNext: { album in
                 XCTAssertEqual(album.count, 10)
             }, onError: { error in
@@ -76,7 +76,7 @@ class HomeViewModelTests: XCTestCase {
         mockingNetworkManager?.shouldReturnError = true
         
         homeViewModel?
-            .apiService.getAlbums(userId: 0)
+            .apiService.fetchAlbums(userId: 0)
             .subscribe(onNext: { album in
                 XCTFail()
             }, onError: { error in

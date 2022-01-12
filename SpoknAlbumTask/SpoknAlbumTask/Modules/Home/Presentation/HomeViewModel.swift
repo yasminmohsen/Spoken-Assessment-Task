@@ -11,34 +11,35 @@ import RxCocoa
 class HomeViewModel {
     
     //MARK: - Proprties
-    public var apiService :ApiServiceProtocol!
+    var apiService :ApiServiceProtocol!
     private let disposeBag = DisposeBag()
     private lazy var userBehaviorRelay = BehaviorRelay<User?>(value: nil)
-    private lazy var albumBehaviorRelay = BehaviorRelay<[Album]>(value: [])
     lazy var homePublishSubj = PublishSubject<HomeModel>()
     lazy var isLoadingBehaviourRelay =  BehaviorRelay<Bool>(value: true)
-   
+    
+    //MARK: - Set ApiService
     init(apiService :ApiServiceProtocol = NetworkManager()) {
         self.apiService = apiService
     }
     
     
     //MARK: - Fetching HomeData From Api
-    
     func fetchHomeData(){
-        isLoadingBehaviourRelay.accept(true)
-        apiService.getUsers().subscribe(onNext: { [weak self] usr in
+        
+        isLoadingBehaviourRelay.accept(true) // Waiting For Data
+        
+        apiService.fetchUsers()
+            .subscribe(on: ConcurrentDispatchQueueScheduler.init(qos: .background))
+            .subscribe(onNext: { [weak self] usr in
             guard let self = self else{return}
             self.userBehaviorRelay.accept(usr)
         }, onError: { error in
-          
+            // Error
         }).disposed(by: disposeBag)
-        
         
         userBehaviorRelay
             .asObservable()
             .skip(1)
-            .observe(on: MainScheduler.asyncInstance)
             .subscribe(onNext: { [weak self] user in
                 guard let self = self , let  id = user?.id else{return}
                 self.fetchAlbumData(userId: id)
@@ -48,28 +49,17 @@ class HomeViewModel {
     //MARK: - Fetching AlbumData From Api
     func fetchAlbumData(userId:Int){
         
-        self.apiService.getAlbums(userId: userId).subscribe(onNext: { [weak self] album in
+        self.apiService.fetchAlbums(userId: userId).subscribe(onNext: { [weak self] album in
             guard let self = self else{return}
-            self.albumBehaviorRelay.accept(album)
-        }, onError: { error -> Void in
-          
+            guard let user = self.userBehaviorRelay.value else{return}
+            self.isLoadingBehaviourRelay.accept(false)
+            self.homePublishSubj.onNext(HomeModel(user: user , albums: album))
+            
+        }, onError: { error in
+            //error
         }).disposed(by: self.disposeBag)
         
-        albumBehaviorRelay
-            .asObservable()
-            .skip(1)
-            .observe(on: MainScheduler.asyncInstance)
-            .subscribe(onNext: {[weak self] album in
-                guard let self = self ,
-                      let user = self.userBehaviorRelay.value else{return}
-                self.isLoadingBehaviourRelay.accept(false)
-                self.homePublishSubj.onNext(HomeModel(user: user , albums: album))
-            }).disposed(by: disposeBag)
-        
     }
-    
-    
-    
     
 }
 

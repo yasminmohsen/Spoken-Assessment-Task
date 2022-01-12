@@ -26,7 +26,7 @@ class ImageViewerViewController: UIViewController,UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
       setupUi()
-      setObserver()
+      setActionObserver()
     }
     
     func setupUi(){
@@ -40,7 +40,7 @@ class ImageViewerViewController: UIViewController,UIScrollViewDelegate {
     
     }
     
-    func setObserver(){
+    func setActionObserver(){
     
         shareButton.rx.tap.subscribe(onNext: { [weak self ] in
         guard let self = self else {return}

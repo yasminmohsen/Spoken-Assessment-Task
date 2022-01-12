@@ -16,7 +16,7 @@ protocol ApiServiceProtocol {
     // MARK: - Functions
     
     func fetchPhotos(albumId:Int)->Observable<[AlbumImage]>
-    func getUsers() -> Observable<User>
-    func getAlbums(userId:Int) -> Observable<[Album]> 
+    func fetchUsers() -> Observable<User>
+    func fetchAlbums(userId:Int) -> Observable<[Album]> 
     
 }

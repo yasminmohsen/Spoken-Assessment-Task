@@ -222,7 +222,7 @@
                                     <string>Title</string>
                                 </scopeButtonTitles>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sTb-nB-6cZ">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sTb-nB-6cZ">
                                 <rect key="frame" x="0.0" y="191" width="414" height="671"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="98a-Mx-4u9">
@@ -276,9 +276,9 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="lpl-kK-ShT" customClass="AlbumImageCollectionViewCell" customModule="SpoknAlbumTask" customModuleProvider="target">
                                         <rect key="frame" x="103.5" y="0.0" width="207" height="149"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AGk-CN-VZO">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jdP-qm-it1">
                                             <rect key="frame" x="0.0" y="0.0" width="207" height="149"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bNh-eo-0Il">
                                                     <rect key="frame" x="0.0" y="0.0" width="207" height="149"/>
@@ -293,10 +293,10 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="bNh-eo-0Il" secondAttribute="trailing" id="11E-tr-bDA"/>
-                                                <constraint firstItem="bNh-eo-0Il" firstAttribute="centerX" secondItem="AGk-CN-VZO" secondAttribute="centerX" id="VRz-WD-eRT"/>
-                                                <constraint firstItem="bNh-eo-0Il" firstAttribute="leading" secondItem="AGk-CN-VZO" secondAttribute="leading" id="fWo-sR-bOi"/>
-                                                <constraint firstItem="bNh-eo-0Il" firstAttribute="top" secondItem="AGk-CN-VZO" secondAttribute="top" id="jXX-Ak-va6"/>
-                                                <constraint firstItem="bNh-eo-0Il" firstAttribute="centerY" secondItem="AGk-CN-VZO" secondAttribute="centerY" id="jo7-8y-tGz"/>
+                                                <constraint firstItem="bNh-eo-0Il" firstAttribute="centerX" secondItem="jdP-qm-it1" secondAttribute="centerX" id="VRz-WD-eRT"/>
+                                                <constraint firstItem="bNh-eo-0Il" firstAttribute="leading" secondItem="jdP-qm-it1" secondAttribute="leading" id="fWo-sR-bOi"/>
+                                                <constraint firstItem="bNh-eo-0Il" firstAttribute="top" secondItem="jdP-qm-it1" secondAttribute="top" id="jXX-Ak-va6"/>
+                                                <constraint firstItem="bNh-eo-0Il" firstAttribute="centerY" secondItem="jdP-qm-it1" secondAttribute="centerY" id="jo7-8y-tGz"/>
                                                 <constraint firstAttribute="bottom" secondItem="bNh-eo-0Il" secondAttribute="bottom" id="qf7-di-ShH"/>
                                             </constraints>
                                         </collectionViewCellContentView>

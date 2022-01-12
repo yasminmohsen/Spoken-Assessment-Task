@@ -28,7 +28,7 @@ class MockingNetworkManager :ApiServiceProtocol {
        
 
  
-    func getUsers() -> Observable<User> {
+    func fetchUsers() -> Observable<User> {
       
         if(shouldReturnError!){
             ChangeToErrorReqProvider()
@@ -41,7 +41,7 @@ class MockingNetworkManager :ApiServiceProtocol {
        
     }
     
-    func getAlbums(userId: Int) -> Observable<[Album]> {
+    func fetchAlbums(userId: Int) -> Observable<[Album]> {
         
         if(shouldReturnError!){
             ChangeToErrorReqProvider()
