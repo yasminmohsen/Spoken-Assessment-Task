@@ -26,7 +26,7 @@ class ProfileViewModel {
     }
     
     
-    //MARK: - Fetching HomeData From Api :
+    //MARK: - Fetching ProfileData From Api :
     func fetchProfileData(){
         isLoadingBehaviourRelay.accept(true) // Waiting For Data
           
@@ -37,7 +37,7 @@ class ProfileViewModel {
             self.userBehaviorRelay.accept(usr) //Update userBehaviorRelay value
         }, onError: {[weak self] error in
             guard let self = self else{return}
-            self.errorBehaviourRelay.accept(CustomError.localizedError(error: error)) // Emit Error to errorBehaviourRelay
+            self.errorBehaviourRelay.accept(CustomError.localizedError(error: error)) // Emit Error
         }).disposed(by: disposeBag)
         
         
@@ -62,7 +62,7 @@ class ProfileViewModel {
             self.profilePublishSubj.onNext(ProfileModel(user: user , albums: album)) // Emit userProfile data
         }, onError: { [weak self ]error in
             guard let self = self else{return}
-            self.errorBehaviourRelay.accept(CustomError.localizedError(error: error)) // Emit error to errorBehaviourRelay
+            self.errorBehaviourRelay.accept(CustomError.localizedError(error: error)) // Emit error 
         }).disposed(by: self.disposeBag)
         
     }

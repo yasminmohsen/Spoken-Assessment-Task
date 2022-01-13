@@ -1,5 +1,5 @@
 //
-//  HomeViewModelTests.swift
+//  ProfileViewModelTests.swift
 //  SpoknAlbumTaskTests
 //
 //  Created by Yasmin Mohsen on 11/01/2022.

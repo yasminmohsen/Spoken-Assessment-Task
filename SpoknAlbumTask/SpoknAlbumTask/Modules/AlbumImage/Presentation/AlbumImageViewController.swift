@@ -48,7 +48,8 @@ class AlbumImageViewController: UIViewController {
         albumImageViewModel.isLoadingBehaviourRelay.skip(1).subscribe(onNext: { [weak self] isLoading in
             guard let self = self else {return}
             if(!isLoading){
-                UIView.animate(withDuration:2) {
+                UIView.animate(withDuration:2) {  [weak self] in
+                    guard let self = self else {return}
                     self.overLayCollectionView.alpha = 0
                 }
             }

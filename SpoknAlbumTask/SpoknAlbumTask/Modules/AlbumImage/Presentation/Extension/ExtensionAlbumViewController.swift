@@ -27,7 +27,6 @@ extension AlbumImageViewController: UICollectionViewDelegate,UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellWidth = collectionView.bounds.width/3.0
         let cellHeight = cellWidth
-
         return CGSize(width: cellWidth, height: cellHeight)
     }
 }

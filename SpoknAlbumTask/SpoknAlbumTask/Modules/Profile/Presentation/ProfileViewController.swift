@@ -40,7 +40,7 @@ class ProfileViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: true)
         bindViewModel()
         setupActionObserves()
-        profileViewModel.fetchProfileData() ///Call ViewModel Fetching Func To Fetch HomeData From Api
+        profileViewModel.fetchProfileData() ///Call ViewModel Fetching Func To Fetch ProfileData From Api
         
     }
     

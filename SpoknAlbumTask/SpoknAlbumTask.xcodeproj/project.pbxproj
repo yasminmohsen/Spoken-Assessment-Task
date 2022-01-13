@@ -274,9 +274,9 @@
 			isa = PBXGroup;
 			children = (
 				6C886CB9278F4FD500FEAA72 /* Cells */,
+				6C886CB3278F4EC600FEAA72 /* Extension */,
 				6C3ADD23278B3DCB000418EC /* ProfileViewController.swift */,
 				6C3ADD21278B3D9F000418EC /* ProfileViewModel.swift */,
-				6C886CB3278F4EC600FEAA72 /* Extension */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -320,9 +320,9 @@
 			isa = PBXGroup;
 			children = (
 				6C886CBA278F4FF000FEAA72 /* Cells */,
+				6C886CB8278F4FB700FEAA72 /* Extension */,
 				6C3ADD2C278B5C63000418EC /* AlbumImageViewController.swift */,
 				6C3ADD2E278B5CBD000418EC /* AlbumImageViewModel.swift */,
-				6C886CB8278F4FB700FEAA72 /* Extension */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -379,7 +379,7 @@
 		6C886CBF278F5B3000FEAA72 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				6C886CC3278F5BE200FEAA72 /* Utils */,
+				6C886CC3278F5BE200FEAA72 /* Utilities  */,
 				6C886CC2278F5B9A00FEAA72 /* Remote */,
 			);
 			path = Data;
@@ -401,12 +401,12 @@
 			path = Remote;
 			sourceTree = "<group>";
 		};
-		6C886CC3278F5BE200FEAA72 /* Utils */ = {
+		6C886CC3278F5BE200FEAA72 /* Utilities  */ = {
 			isa = PBXGroup;
 			children = (
 				6C3ADD0D278B3B62000418EC /* JsonConverter.swift */,
 			);
-			path = Utils;
+			path = "Utilities ";
 			sourceTree = "<group>";
 		};
 		6C886CC4278F5C6900FEAA72 /* Base */ = {

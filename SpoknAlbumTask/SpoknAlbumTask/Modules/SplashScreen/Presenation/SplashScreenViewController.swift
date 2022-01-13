@@ -23,7 +23,7 @@ class SplashScreenViewController: UIViewController {
     }
     
     
-    func AnimateView(){
+    private func AnimateView(){
         
         UIView.animate(withDuration: 3 , delay:0 ,options:.curveEaseIn) {[weak self] in
             guard let self = self else {return}
