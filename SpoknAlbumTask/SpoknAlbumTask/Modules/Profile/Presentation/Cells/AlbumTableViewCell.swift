@@ -1,5 +1,5 @@
 //
-//  HomeTableViewCell.swift
+//  AlbumTableViewCell.swift
 //  SpoknAlbumTask
 //
 //  Created by Yasmin Mohsen on 09/01/2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 import SkeletonView
-class HomeTableViewCell: UITableViewCell {
+class AlbumTableViewCell: UITableViewCell {
     
     //MARK: - Outlets
     @IBOutlet private weak var albumTitleLabel: UILabel!
@@ -30,7 +30,7 @@ class HomeTableViewCell: UITableViewCell {
     /// Start Animated SkeltonView On The Cell :
     func startAnimateSkeltonCell(){
         let skeltonViewsArray :[UIView] = [albumTitleLabel,albumIconImg]
-        startSkelton(skeltonViewsArray)
+        skeltonViewsArray.startAnimationForSkeltonViewes()
     }
     
     

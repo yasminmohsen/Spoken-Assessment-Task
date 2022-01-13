@@ -1,5 +1,5 @@
 //
-//  HomeViewModel.swift
+//  ProfileViewModel.swift
 //  SpoknAlbumTask
 //
 //  Created by Yasmin Mohsen on 09/01/2022.
@@ -10,13 +10,13 @@ import RxSwift
 import RxCocoa
 import Moya
 import RxMoya
-class HomeViewModel {
+class ProfileViewModel {
     
     //MARK: - Proprties
     var apiService :ApiServiceProtocol!
     private let disposeBag = DisposeBag()
     private lazy var userBehaviorRelay = BehaviorRelay<User?>(value: nil)
-    lazy var homePublishSubj = PublishSubject<HomeModel>()
+    lazy var profilePublishSubj = PublishSubject<ProfileModel>()
     lazy var isLoadingBehaviourRelay =  BehaviorRelay<Bool>(value: true)
     lazy var errorBehaviourRelay =  BehaviorRelay<String>(value: "")
     
@@ -27,14 +27,14 @@ class HomeViewModel {
     
     
     //MARK: - Fetching HomeData From Api :
-    func fetchHomeData(){
+    func fetchProfileData(){
         isLoadingBehaviourRelay.accept(true) // Waiting For Data
-        
+          
         apiService.fetchUsers()
             .subscribe(on: ConcurrentDispatchQueueScheduler.init(qos: .background))
             .subscribe(onNext: { [weak self] usr in
             guard let self = self else{return}
-            self.userBehaviorRelay.accept(usr)
+            self.userBehaviorRelay.accept(usr) //Update userBehaviorRelay value
         }, onError: {[weak self] error in
             guard let self = self else{return}
             self.errorBehaviourRelay.accept(CustomError.localizedError(error: error)) // Emit Error to errorBehaviourRelay
@@ -52,16 +52,17 @@ class HomeViewModel {
     
     //MARK: - Fetching AlbumData From Api :
     func fetchAlbumData(userId:Int){
-        self.apiService.fetchAlbums(userId: userId).subscribe(on: ConcurrentDispatchQueueScheduler.init(qos: .background)).subscribe(onNext: { [weak self] album in
+        self.apiService.fetchAlbums(userId: userId)
+            .subscribe(on: ConcurrentDispatchQueueScheduler.init(qos: .background))
+            .subscribe(onNext: { [weak self] album in
             
             guard let self = self else{return}
             guard let user = self.userBehaviorRelay.value else{return}
             self.isLoadingBehaviourRelay.accept(false) // Stop laoding
-            self.homePublishSubj.onNext(HomeModel(user: user , albums: album)) // Emit [UserInfo+Album] to homePublishSubj
-            
+            self.profilePublishSubj.onNext(ProfileModel(user: user , albums: album)) // Emit userProfile data
         }, onError: { [weak self ]error in
             guard let self = self else{return}
-            self.errorBehaviourRelay.accept(CustomError.localizedError(error: error)) // Emit Error to errorBehaviourRelay
+            self.errorBehaviourRelay.accept(CustomError.localizedError(error: error)) // Emit error to errorBehaviourRelay
         }).disposed(by: self.disposeBag)
         
     }

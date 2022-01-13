@@ -12,16 +12,16 @@ import SkeletonView
 
 // MARK: - Add Stand-alone Function To Manage SkeltonView Apperance :
 
-///Start AnimatedGradient
-func startSkelton(_ skiltonViewArray:[UIView]){
+extension Array where Element == UIView {
     
-skiltonViewArray.forEach({ obj in
-     obj.showAnimatedGradientSkeleton()}
-)}
+    func startAnimationForSkeltonViewes () {   ///Start AnimatedGradient
+        
+        self.forEach({$0.showAnimatedGradientSkeleton()})
+    }
     
-///Hide AnimatedGradient
-func stopSkelton(_ skiltonViewArray:[UIView]){
     
-    skiltonViewArray.forEach({ obj in
-     obj.hideSkeleton()})
+    func hideForSkeltonViewes () {     ///Hide AnimatedGradient
+        
+        self.forEach({$0.hideSkeleton()})
+    }
 }

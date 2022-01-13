@@ -10,9 +10,9 @@ import RxSwift
 import Moya
 import RxMoya
 @testable import SpoknAlbumTask
-class HomeViewModelTests: XCTestCase {
+class ProfileViewModelTests: XCTestCase {
     
-    var homeViewModel :HomeViewModel?
+    var profileViewModel :ProfileViewModel?
     var mockingNetworkManager :MockingNetworkManager?
     var dispose:DisposeBag?
     
@@ -21,7 +21,7 @@ class HomeViewModelTests: XCTestCase {
         
         mockingNetworkManager = MockingNetworkManager(shouldReturnError: false)
         dispose = DisposeBag()
-        homeViewModel = HomeViewModel(apiService: mockingNetworkManager!)
+        profileViewModel = ProfileViewModel(apiService: mockingNetworkManager!)
     }
     
     override func tearDownWithError() throws {
@@ -29,13 +29,13 @@ class HomeViewModelTests: XCTestCase {
         
         mockingNetworkManager = nil
         dispose = nil
-        homeViewModel = nil
+        profileViewModel = nil
     }
     
     //MARK:- Testing FetchingUser Functions :
     
     func testSucessfullFtechingUsers(){       /// Testing SucessfullFtechingUsers Case
-        homeViewModel?
+        profileViewModel?
             .apiService.fetchUsers()
             .subscribe(onNext: { user in
                 XCTAssertNotNil(user)
@@ -48,7 +48,7 @@ class HomeViewModelTests: XCTestCase {
     func testFailureFtechingUser(){        /// Testing FailureFtechingUsers Case
         mockingNetworkManager?.shouldReturnError = true
         
-        homeViewModel?
+        profileViewModel?
             .apiService.fetchUsers()
             .subscribe(onNext: { album in
                 XCTFail()
@@ -60,7 +60,7 @@ class HomeViewModelTests: XCTestCase {
     //MARK:- Testing FetchingAlbum Functions :
     
     func testSucessfullFtechingAlbumData(){      /// Testing SucessfullFtechingAlbumData Case
-        homeViewModel?
+        profileViewModel?
             .apiService
             .fetchAlbums(userId: 0)
             .subscribe(onNext: { album in
@@ -75,7 +75,7 @@ class HomeViewModelTests: XCTestCase {
     func testFailureFtechingAlbumData(){           /// Testing FailureFtechingAlbumData Case
         mockingNetworkManager?.shouldReturnError = true
         
-        homeViewModel?
+        profileViewModel?
             .apiService.fetchAlbums(userId: 0)
             .subscribe(onNext: { album in
                 XCTFail()

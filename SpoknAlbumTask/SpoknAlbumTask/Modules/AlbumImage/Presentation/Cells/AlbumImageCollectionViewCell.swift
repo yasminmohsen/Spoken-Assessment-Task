@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import SkeletonView
 class AlbumImageCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Outlets
@@ -19,11 +20,11 @@ class AlbumImageCollectionViewCell: UICollectionViewCell {
     {
         let url = URL(string: albumImageObj.imageURL)
         albumImage.kf.setImage(with: url)
+       
     }
     
     func startAnimateSkeltonCell(){
-        let skeltonViewsArray :[UIView] = [albumImage]
-        startSkelton(skeltonViewsArray)
+        [albumImage].startAnimationForSkeltonViewes()
     }
 }
 
