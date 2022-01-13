@@ -340,7 +340,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "0C0FDE8B-220A-43EA-9E88-20DC18E4107D - c6e83e4e6ec043c4"
+                  uuid = "0C0FDE8B-220A-43EA-9E88-20DC18E4107D - c6e83e4e6ec0421e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -350,12 +350,12 @@
                   urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
                   offsetFromSymbolStart = "987">
                </Location>
                <Location
-                  uuid = "0C0FDE8B-220A-43EA-9E88-20DC18E4107D - ed228b0e760ba80d"
+                  uuid = "0C0FDE8B-220A-43EA-9E88-20DC18E4107D - ed228b0e760ba9d7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -365,9 +365,9 @@
                   urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "23">
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "105">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -388,7 +388,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "5764E8D7-82B3-46A0-82B8-5D0980302165 - c6e83e4e6ec04306"
+                  uuid = "5764E8D7-82B3-46A0-82B8-5D0980302165 - c6e83e4e6ec041b9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -398,12 +398,12 @@
                   urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "1624">
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "1695">
                </Location>
                <Location
-                  uuid = "5764E8D7-82B3-46A0-82B8-5D0980302165 - ed228b0e760ba8cf"
+                  uuid = "5764E8D7-82B3-46A0-82B8-5D0980302165 - ed228b0e760baa70"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -413,9 +413,9 @@
                   urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "130">
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "346">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -578,114 +578,6 @@
             endingLineNumber = "50"
             landmarkName = "setUpUi()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7C703A5E-3FE8-4917-85BA-DF505E52DD0D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "AlbumImageViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "7C703A5E-3FE8-4917-85BA-DF505E52DD0D - 9e55eab216f4b3b2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SpoknAlbumTask.AlbumImageViewController.countBehaviourRelay.getter : RxRelay.BehaviorRelay&lt;Swift.Int&gt;"
-                  moduleName = "SpoknAlbumTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  uuid = "7C703A5E-3FE8-4917-85BA-DF505E52DD0D - 273f1f1557454d3e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SpoknAlbumTask.AlbumImageViewController.countBehaviourRelay.setter : RxRelay.BehaviorRelay&lt;Swift.Int&gt;"
-                  moduleName = "SpoknAlbumTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "148">
-               </Location>
-               <Location
-                  uuid = "7C703A5E-3FE8-4917-85BA-DF505E52DD0D - 36177edda695f40a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SpoknAlbumTask.AlbumImageViewController.countBehaviourRelay.modify : RxRelay.BehaviorRelay&lt;Swift.Int&gt;"
-                  moduleName = "SpoknAlbumTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "18">
-               </Location>
-               <Location
-                  uuid = "7C703A5E-3FE8-4917-85BA-DF505E52DD0D - 3ec36466c29c8ca1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SpoknAlbumTask.AlbumImageViewController.countBehaviourRelay.modify : RxRelay.BehaviorRelay&lt;Swift.Int&gt; with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "SpoknAlbumTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "8">
-               </Location>
-               <Location
-                  uuid = "7C703A5E-3FE8-4917-85BA-DF505E52DD0D - d913529b6c45a6cd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SpoknAlbumTask.AlbumImageViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SpoknAlbumTask.AlbumImageViewController"
-                  moduleName = "SpoknAlbumTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "527">
-               </Location>
-               <Location
-                  uuid = "7C703A5E-3FE8-4917-85BA-DF505E52DD0D - dff291fbee4cf7f0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SpoknAlbumTask.AlbumImageViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SpoknAlbumTask.AlbumImageViewController&gt;"
-                  moduleName = "SpoknAlbumTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "471">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

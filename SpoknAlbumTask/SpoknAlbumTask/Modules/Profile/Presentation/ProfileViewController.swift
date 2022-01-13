@@ -37,6 +37,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         skiltonViewArray = [userNamelabel,userAddressLabel,userZipCodeLabel,myAlbumsLabel,userImg]
+        self.navigationItem.setHidesBackButton(true, animated: true)
         bindViewModel()
         setupActionObserves()
         profileViewModel.fetchProfileData() ///Call ViewModel Fetching Func To Fetch HomeData From Api
