@@ -13,68 +13,100 @@ import Moya
 @testable import SpoknAlbumTask
 
 class MockingNetworkManager :ApiServiceProtocol {
- 
-   
-    var shouldReturnError :Bool?
+    
+    //MARK: - Properties
+    var shouldReturnError :Bool?  /// Used To Test failure Cases
     var  provider =  MoyaProvider<ApiServices>(stubClosure: MoyaProvider.immediatelyStub)
     let dispose = DisposeBag()
-  
     
     
-    
+    //MARK: - override init to set the value of shouldReturnError :
     init(shouldReturnError:Bool) {
         self.shouldReturnError = shouldReturnError
     }
-       
-
- 
+    
+    
+    //MARK: - Functions :
     func fetchUsers() -> Observable<User> {
-      
+        
         if(shouldReturnError!){
             ChangeToErrorReqProvider()
-            return  provider.rx.request(.user).filterSuccessfulStatusCodes().map([User].self).map({return $0[0]}).asObservable()
+            return provider
+                .rx
+                .request(.user)
+                .filterSuccessfulStatusCodes()
+                .map([User].self).map({return $0[0]})
+                .asObservable()
         }
         else{
-            return  provider.rx.request(.user).filterSuccessfulStatusCodes().map([User].self).map({return $0[0]}).asObservable()
+            return provider
+                .rx
+                .request(.user)
+                .filterSuccessfulStatusCodes()
+                .map([User].self).map({return $0[0]})
+                .asObservable()
         }
-
-       
+        
     }
+    
     
     func fetchAlbums(userId: Int) -> Observable<[Album]> {
         
         if(shouldReturnError!){
             ChangeToErrorReqProvider()
-            return  provider.rx.request(.albums(userId: userId)).filterSuccessfulStatusCodes().filterSuccessfulStatusCodes().map([Album].self).asObservable()
+            return provider
+                .rx
+                .request(.albums(userId: userId))
+                .filterSuccessfulStatusCodes()
+                .map([Album].self)
+                .asObservable()
             
         }
-         
+        
         else{
-            return provider.rx.request(.albums(userId: userId)).filterSuccessfulStatusCodes().map([Album].self).asObservable()
-        }
-             
+            return provider
+                .rx
+                .request(.albums(userId: userId))
+                .filterSuccessfulStatusCodes()
+                .map([Album].self)
+                .asObservable()
         }
         
+    }
+    
+    
     
     func fetchPhotos(albumId: Int) -> Observable<[AlbumImage]> {
-
+        
         if(shouldReturnError!){
             ChangeToErrorReqProvider()
-            return provider.rx.request(.images(albumId: 2)).filterSuccessfulStatusCodes().map([AlbumImage].self).asObservable()
+            return provider
+                .rx
+                .request(.images(albumId: 2))
+                .filterSuccessfulStatusCodes()
+                .map([AlbumImage].self)
+                .asObservable()
         }
         else{
-            return provider.rx.request(.images(albumId: 1)).filterSuccessfulStatusCodes().map([AlbumImage].self).asObservable()
+            return provider
+                .rx
+                .request(.images(albumId: 1))
+                .filterSuccessfulStatusCodes()
+                .map([AlbumImage].self)
+                .asObservable()
         }
+        
+    }
     
 }
-    
-    
-}
+
+
+
 
 extension MockingNetworkManager {
     
-    
-    fileprivate func ChangeToErrorReqProvider(){
+    /// To create a custom endPoint with response code = 404 to test failure
+    private func ChangeToErrorReqProvider(){
         
         let customEndPoint = {(target: ApiServices)->Endpoint in
             return Endpoint(url: ((URL(target: target).absoluteString)),
@@ -83,8 +115,7 @@ extension MockingNetworkManager {
                             task: target.task,
                             httpHeaderFields: target.headers)
         }
-       provider = MoyaProvider<ApiServices>(endpointClosure: customEndPoint, stubClosure: MoyaProvider.immediatelyStub)
-     
+        provider = MoyaProvider<ApiServices>(endpointClosure: customEndPoint, stubClosure: MoyaProvider.immediatelyStub)
     }
     
 }

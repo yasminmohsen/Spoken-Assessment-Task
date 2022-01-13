@@ -26,6 +26,5 @@ extension HomeViewController :UITableViewDelegate,UITableViewDataSource {
         return 88
     }
     
-    
-    
+  
 }

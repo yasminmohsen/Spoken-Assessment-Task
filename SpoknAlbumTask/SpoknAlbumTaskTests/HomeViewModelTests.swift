@@ -15,38 +15,26 @@ class HomeViewModelTests: XCTestCase {
     var homeViewModel :HomeViewModel?
     var mockingNetworkManager :MockingNetworkManager?
     var dispose:DisposeBag?
-//    override func setUpWithError() throws {
-//        // Put setup code here. This method is called before the invocation of each test method in the class.
-//        mockingNetworkManager = MockingNetworkManager(shouldReturnError: false)
-//        dispose = DisposeBag()
-//        homeViewModel = HomeViewModel(apiService: mockingNetworkManager!)
-//    }
-//
-//    override func tearDownWithError() throws {
-//        // Put teardown code here. This method is called after the invocation of each test method in the class.
-//        mockingNetworkManager = nil
-//        dispose = nil
-//        homeViewModel = nil
-//    }
     
-    override func setUp() {
+    override func setUpWithError() throws {
+        try super.setUpWithError()
         
-                mockingNetworkManager = MockingNetworkManager(shouldReturnError: false)
-                dispose = DisposeBag()
-                homeViewModel = HomeViewModel(apiService: mockingNetworkManager!)
+        mockingNetworkManager = MockingNetworkManager(shouldReturnError: false)
+        dispose = DisposeBag()
+        homeViewModel = HomeViewModel(apiService: mockingNetworkManager!)
     }
     
-    override func tearDown(){
-            // Put teardown code here. This method is called after the invocation of each test method in the class.
-            mockingNetworkManager = nil
-            dispose = nil
-            homeViewModel = nil
-        }
+    override func tearDownWithError() throws {
+        try super.tearDownWithError()
         
+        mockingNetworkManager = nil
+        dispose = nil
+        homeViewModel = nil
+    }
     
+    //MARK:- Testing FetchingUser Functions :
     
-    
-    func testSucessfullFtechingUsers(){
+    func testSucessfullFtechingUsers(){       /// Testing SucessfullFtechingUsers Case
         homeViewModel?
             .apiService.fetchUsers()
             .subscribe(onNext: { user in
@@ -57,8 +45,7 @@ class HomeViewModelTests: XCTestCase {
     }
     
     
-    
-    func testFailfullFtechingUser(){
+    func testFailureFtechingUser(){        /// Testing FailureFtechingUsers Case
         mockingNetworkManager?.shouldReturnError = true
         
         homeViewModel?
@@ -70,10 +57,9 @@ class HomeViewModelTests: XCTestCase {
             }).disposed(by:dispose!)
     }
     
+    //MARK:- Testing FetchingAlbum Functions :
     
-    
-    
-    func testSucessfullFtechingAlbumData(){
+    func testSucessfullFtechingAlbumData(){      /// Testing SucessfullFtechingAlbumData Case
         homeViewModel?
             .apiService
             .fetchAlbums(userId: 0)
@@ -86,7 +72,7 @@ class HomeViewModelTests: XCTestCase {
     
     
     
-    func testFailfullFtechingAlbumData(){
+    func testFailureFtechingAlbumData(){           /// Testing FailureFtechingAlbumData Case
         mockingNetworkManager?.shouldReturnError = true
         
         homeViewModel?
@@ -99,10 +85,6 @@ class HomeViewModelTests: XCTestCase {
             }).disposed(by:dispose!)
     }
     
-    
-    
-   
-    
-    
+  
 }
 

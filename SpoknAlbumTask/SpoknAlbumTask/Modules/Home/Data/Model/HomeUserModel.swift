@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - Album
 struct HomeModel {
     let user:User
     let albums :[Album]

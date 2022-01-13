@@ -15,24 +15,10 @@ class AlbumImageViewModelTests: XCTestCase {
     var albumImageViewModel :AlbumImageViewModel?
     var mockingNetworkManager :MockingNetworkManager?
     var dispose:DisposeBag?
-//    override func setUpWithError() throws {
-//
-//        mockingNetworkManager = MockingNetworkManager(shouldReturnError: false)
-//        dispose = DisposeBag()
-//        albumImageViewModel = AlbumImageViewModel(apiService: mockingNetworkManager!)
-//
-//    }
-//
-//    override func tearDownWithError() throws {
-//
-//        mockingNetworkManager = nil
-//        dispose = nil
-//        albumImageViewModel = nil
-//
-//    }
+
     
-    
-    override func setUp()  {
+    override func setUpWithError() throws {
+        try super.setUpWithError()
         
         mockingNetworkManager = MockingNetworkManager(shouldReturnError: false)
         dispose = DisposeBag()
@@ -40,7 +26,8 @@ class AlbumImageViewModelTests: XCTestCase {
         
     }
 
-    override func tearDown()  {
+    override func tearDownWithError() throws {
+        try super.tearDownWithError()
         
         mockingNetworkManager = nil
         dispose = nil
@@ -48,6 +35,7 @@ class AlbumImageViewModelTests: XCTestCase {
         
     }
     
+    //MARK:- Testing FetchingImages Functions :
     
     func testSucessfullFtechingImages(){
         
@@ -65,7 +53,6 @@ class AlbumImageViewModelTests: XCTestCase {
     
     
     func testFailfullFtechingImages(){
-        
         mockingNetworkManager?.shouldReturnError = true
         
         albumImageViewModel?

@@ -12,20 +12,27 @@ import RxCocoa
 class AlbumImageViewController: UIViewController {
     //MARK: - Outlets
     @IBOutlet private weak var searchBar: UISearchBar!
+    
     @IBOutlet weak var imageCollectionView: UICollectionView!
+    
     @IBOutlet weak var overLayCollectionView: UICollectionView!
-   
+    
     //MARK: - Properties
     var albumId :Int!
-    var albumTitle :String!
-    var countBehaviourRelay = BehaviorRelay<Int>(value:0)
-    lazy var albumImageViewModel = AlbumImageViewModel()
-    private let disposeBag = DisposeBag()
-  
     
-    //MARK: - Setup Calling For Functions
+    var albumTitle :String!
+    
+    var countBehaviourRelay = BehaviorRelay<Int>(value:0)
+    
+    lazy var albumImageViewModel = AlbumImageViewModel()
+    
+    private let disposeBag = DisposeBag()
+    
+    //MARK: - Setup Calling For Functions :
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationItem.title = albumTitle
         setUpUi()
         bindViewModel()
@@ -33,8 +40,10 @@ class AlbumImageViewController: UIViewController {
         albumImageViewModel.fetchImages(albumId: albumId!)   ///Call ViewModel Fetching Func To Fetch Images  From Api
     }
     
-    //MARK: - BindingViewModel Function
+    //MARK: - BindingViewModel Function :
+    
     private func bindViewModel(){
+        
         ///listen to changing in isLoadingBehaviourRelay to hide or show skeltonView :-
         albumImageViewModel.isLoadingBehaviourRelay.skip(1).subscribe(onNext: { [weak self] isLoading in
             guard let self = self else {return}
@@ -46,42 +55,46 @@ class AlbumImageViewController: UIViewController {
         }).disposed(by: disposeBag)
         
         
-        albumImageViewModel.errorBehaviourRelay.skip(1).subscribe(onNext: { error in
+        ///listen to changing in errorBehaviourRelay to show alert when error  :-
+        albumImageViewModel.errorBehaviourRelay.skip(1).subscribe(onNext: { [weak self] error in
+            guard let self = self else {return}
             showSimpleAlert(title: "Error", message: error, viewRef: self)
         } ).disposed(by: disposeBag)
         
-        //MARK: - Display Images and FilteredImages
         
-        ///1- get the search query from searchText
-        let query = searchBar
-            .rx.text
-            .orEmpty
-            
-        
-        ///2- filter the images array and returned filtered array as observable then bind it  to imageCollectionView
-        Observable
-            .combineLatest(albumImageViewModel.imageBehaviourRelay, query) { [unowned self] (allImages, query) -> [AlbumImage] in
-                let filteredArray = self.albumImageViewModel.filteredContacts( query: query)
-                countBehaviourRelay.accept(filteredArray.count)
-                return filteredArray
-            }
-        .bind(to: imageCollectionView
-                    .rx
-                    .items(cellIdentifier: "cell", cellType: AlbumImageCollectionViewCell.self))
-            { row , item ,cell in
-                cell.configuralbumImageCell(albumImageObj: item)
-            }.disposed(by: disposeBag)
-        
-        
+        ///listen to changing in countBehaviourRelay to update num of cells in ImageCollectionViewr  :-
         countBehaviourRelay.subscribe(onNext: { [weak self]_ in
             guard let self = self else{return}
             self.setUpUi()
         }).disposed(by: disposeBag)
         
         
+        //MARK: - Display Images and FilteredImages :
+        
+        ///1- get the search query from searchText
+        let query = searchBar
+            .rx.text
+            .orEmpty
+        
+        ///2- filter the images array and returned filtered array as observable then bind it  to imageCollectionView
+        Observable
+            .combineLatest(albumImageViewModel.imageBehaviourRelay, query) { [unowned self] (allImages, query) -> [AlbumImage] in
+                let filteredArray = self.albumImageViewModel.filteredContacts( query: query)
+                countBehaviourRelay.accept(filteredArray.count) // Emit new count
+                return filteredArray
+            }
+            .bind(to: imageCollectionView
+                    .rx
+                    .items(cellIdentifier: "cell", cellType: AlbumImageCollectionViewCell.self)){ row , item ,cell in
+                
+                cell.configuralbumImageCell(albumImageObj: item)
+                
+            }.disposed(by: disposeBag)
+        
     }
     
-    //MARK: - Setup Trigger Cell Action (setupActionObserves) Function
+    
+    //MARK: - Setup Trigger Cell Action (setupActionObserves) Function :
     private func setupActionObserves(){
         /// Trigger cellSelecting Action
         imageCollectionView
@@ -96,10 +109,7 @@ class AlbumImageViewController: UIViewController {
                         }}).disposed(by: disposeBag)
         
         
-        
     }
-    
-    
     
 }
 

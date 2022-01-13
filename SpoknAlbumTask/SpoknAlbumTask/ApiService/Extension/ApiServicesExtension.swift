@@ -15,21 +15,21 @@ extension ApiServices:TargetType {
     var baseURL: URL {
         return URL(string: "https://jsonplaceholder.typicode.com")!
     }
+    
     var path: String {
         switch self {
-        case .user:
-            return "/users"
-        case .albums:
-            return "/albums"
-        case .images:
-            return "/photos"
+        case .user:   return "/users"
+        case .albums: return "/albums"
+        case .images: return "/photos"
             
         }
     }
     
+    
     var method: Moya.Method {
         return .get
     }
+    
     
     var task: Task {
         switch self {
@@ -51,6 +51,7 @@ extension ApiServices:TargetType {
         }
     }
     
+    
     var headers: [String : String]? {
         return nil
     }
@@ -60,26 +61,17 @@ extension ApiServices:TargetType {
     var sampleData: Data {
         
         switch self{
-        case .user :
-            return stubGenerator(fileName: "Users")
-            
-        case .albums :
-            return stubGenerator(fileName: "Albums")
-            
-        case .images :
-            return stubGenerator(fileName: "Images")
-            
+        case .user :return stubGenerator(fileName: "Users")
+        case .albums :return stubGenerator(fileName: "Albums")
+        case .images :return stubGenerator(fileName: "Images")
         }
-        
     }
     
-    
+    ///Using This Func To Pass FileName and return converted json(Stubs) To Data
     private func stubGenerator(fileName:String) -> Data{
-        
-        guard let path = Bundle.main.path(forResource: "\(fileName)", ofType: "json"),
-              let data = try? Data(contentsOf: URL(fileURLWithPath: path)) else { return Data()}
+        guard let path = Bundle.main.path(forResource: "\(fileName)", ofType: "json") else { return Data()}
+        guard let data : Data = try? Data(contentsOf: URL(fileURLWithPath: path)) else { return Data()}
         return data
-        
     }
     
 }

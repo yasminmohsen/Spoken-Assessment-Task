@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
+import RxSwift
+//MARK: - Implement overlayCollectionView DataSource & Delegate :
 extension AlbumImageViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
-    
-    //MARK: - Implement overlayCollectionView DataSource & Delegate :
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 18
@@ -19,12 +19,10 @@ extension AlbumImageViewController: UICollectionViewDelegate,UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! AlbumImageCollectionViewCell
-        
         cell.startAnimateSkeltonCell()
         return cell
         
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellWidth = collectionView.bounds.width/3.0
@@ -32,13 +30,17 @@ extension AlbumImageViewController: UICollectionViewDelegate,UICollectionViewDat
 
         return CGSize(width: cellWidth, height: cellHeight)
     }
+}
+
+
+//MARK: - Implement imageCollectionView CompositionalLayout :
+
+extension AlbumImageViewController{
     
-    
-    //MARK: - Implement imageCollectionView CompositionalLayout :
-    
+
     func setUpUi(){
         
-        let count:Double = Double(countBehaviourRelay.value > 0 ? countBehaviourRelay.value : 1)
+        let count:Double = Double(countBehaviourRelay.value)
         var itemFracWidth :Double = 1/3
    
         switch count {
@@ -50,7 +52,8 @@ extension AlbumImageViewController: UICollectionViewDelegate,UICollectionViewDat
         
         let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(CGFloat(itemFracWidth)), heightDimension: .fractionalHeight(1)))
         
-        let horizontlGgroup = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1/3)),subitems: [item])
+        let horizontlGgroup = NSCollectionLayoutGroup
+            .horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1/3)),subitems: [item])
 
          let section = NSCollectionLayoutSection(group: horizontlGgroup)
         

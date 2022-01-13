@@ -7,8 +7,8 @@
 
 import Foundation
 
+// MARK: - AlbumImage
 struct AlbumImage: Codable {
-    
     let albumID, imageId: Int
     let imageTitle,imageURL, thumbnailURL: String
     
