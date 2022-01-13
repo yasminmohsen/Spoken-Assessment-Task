@@ -8,6 +8,8 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Moya
+import RxMoya
 class HomeViewModel {
     
     //MARK: - Proprties
@@ -16,6 +18,7 @@ class HomeViewModel {
     private lazy var userBehaviorRelay = BehaviorRelay<User?>(value: nil)
     lazy var homePublishSubj = PublishSubject<HomeModel>()
     lazy var isLoadingBehaviourRelay =  BehaviorRelay<Bool>(value: true)
+    lazy var errorBehaviourRelay =  BehaviorRelay<String>(value: "")
     
     //MARK: - Set ApiService
     init(apiService :ApiServiceProtocol = NetworkManager()) {
@@ -33,8 +36,11 @@ class HomeViewModel {
             .subscribe(onNext: { [weak self] usr in
             guard let self = self else{return}
             self.userBehaviorRelay.accept(usr)
-        }, onError: { error in
-            // Error
+        }, onError: {[weak self] error in
+            guard let self = self else{return}
+            
+            self.errorBehaviourRelay.accept(CustomError.localizedError(error: error))
+            
         }).disposed(by: disposeBag)
         
         userBehaviorRelay
@@ -51,12 +57,17 @@ class HomeViewModel {
         
         self.apiService.fetchAlbums(userId: userId).subscribe(onNext: { [weak self] album in
             guard let self = self else{return}
+            
             guard let user = self.userBehaviorRelay.value else{return}
             self.isLoadingBehaviourRelay.accept(false)
             self.homePublishSubj.onNext(HomeModel(user: user , albums: album))
             
-        }, onError: { error in
-            //error
+        }, onError: { [weak self ]error in
+            guard let self = self else{return}
+            
+           
+            self.errorBehaviourRelay.accept(CustomError.localizedError(error: error))
+            
         }).disposed(by: self.disposeBag)
         
     }

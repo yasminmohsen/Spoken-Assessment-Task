@@ -212,5 +212,481 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2AE93591-D7A0-481B-9E33-91F24A14B154"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Commons/Presentation/Base/CusromError.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "localizedError(error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BCBE9341-77D1-449C-AE16-75C3CB69BD32"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Commons/Presentation/Base/CusromError.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "localizedError(error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A4D2446D-DABD-46ED-803A-A03BD58EFAAC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Commons/Presentation/Base/CusromError.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "localizedError(error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CAB0D556-C0B6-4F77-8956-F391E369BE00"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Commons/Presentation/Base/CusromError.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "localizedError(error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A62609AF-A89E-444B-A185-6859DB46CCF6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Commons/Presentation/Base/CusromError.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "localizedError(error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "746EA7FE-1A7B-4F53-9ACD-CA7F3CB2F12A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Commons/Presentation/Base/CusromError.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "localizedError(error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E06ECE8A-461F-4CD1-830C-FAF5611389E4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Commons/Presentation/Base/CusromError.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "localizedError(error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0C0FDE8B-220A-43EA-9E88-20DC18E4107D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "bindViewModel()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0C0FDE8B-220A-43EA-9E88-20DC18E4107D - c6e83e4e6ec043c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpoknAlbumTask.AlbumImageViewController.bindViewModel() -&gt; ()"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "987">
+               </Location>
+               <Location
+                  uuid = "0C0FDE8B-220A-43EA-9E88-20DC18E4107D - ed228b0e760ba80d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.String) -&gt; () in SpoknAlbumTask.AlbumImageViewController.bindViewModel() -&gt; ()"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5764E8D7-82B3-46A0-82B8-5D0980302165"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "bindViewModel()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5764E8D7-82B3-46A0-82B8-5D0980302165 - c6e83e4e6ec04306"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpoknAlbumTask.AlbumImageViewController.bindViewModel() -&gt; ()"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "1624">
+               </Location>
+               <Location
+                  uuid = "5764E8D7-82B3-46A0-82B8-5D0980302165 - ed228b0e760ba8cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.String) -&gt; () in SpoknAlbumTask.AlbumImageViewController.bindViewModel() -&gt; ()"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "130">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A83C51BD-A5CD-41A9-973E-0CD80E926931"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "bindViewModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1FDE330D-CF5B-45B1-9528-3820AACE6612"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "bindViewModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55E4FA86-9C1F-4EF7-8766-5575782DD59B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "fetchImages(albumId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9F8B58B4-89CE-4B0B-A4A9-396A23D57721"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Commons/AlertManager/AlertManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "showSimpleAlert(title:message:viewRef:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CEA4C84F-DC9D-4EF5-80B0-35025B6551E2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Commons/AlertManager/AlertManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "showSimpleAlert(title:message:viewRef:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "18E0EC99-6FC2-4E62-8A68-C64E223D232E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Commons/AlertManager/AlertManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "showSimpleAlert(title:message:viewRef:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB033A0E-1F53-4931-A808-85589F9815DC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Commons/AlertManager/AlertManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "showSimpleAlert(title:message:viewRef:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08AA83AD-1A84-44DA-92B7-9E7D7821F20E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Modules/AlbumImage/Presentation/Extension/ExtensionAlbumViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "setUpUi()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "544216AE-BBEF-434A-B64D-A9D816144A9F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Modules/AlbumImage/Presentation/Extension/ExtensionAlbumViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "setUpUi()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7DA6348C-45A2-496E-BD73-F2DE19346EF9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Modules/AlbumImage/Presentation/Extension/ExtensionAlbumViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "setUpUi()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7C703A5E-3FE8-4917-85BA-DF505E52DD0D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "AlbumImageViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "7C703A5E-3FE8-4917-85BA-DF505E52DD0D - 9e55eab216f4b3b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpoknAlbumTask.AlbumImageViewController.countBehaviourRelay.getter : RxRelay.BehaviorRelay&lt;Swift.Int&gt;"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "7C703A5E-3FE8-4917-85BA-DF505E52DD0D - 273f1f1557454d3e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpoknAlbumTask.AlbumImageViewController.countBehaviourRelay.setter : RxRelay.BehaviorRelay&lt;Swift.Int&gt;"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "7C703A5E-3FE8-4917-85BA-DF505E52DD0D - 36177edda695f40a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpoknAlbumTask.AlbumImageViewController.countBehaviourRelay.modify : RxRelay.BehaviorRelay&lt;Swift.Int&gt;"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "7C703A5E-3FE8-4917-85BA-DF505E52DD0D - 3ec36466c29c8ca1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpoknAlbumTask.AlbumImageViewController.countBehaviourRelay.modify : RxRelay.BehaviorRelay&lt;Swift.Int&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "7C703A5E-3FE8-4917-85BA-DF505E52DD0D - d913529b6c45a6cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpoknAlbumTask.AlbumImageViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SpoknAlbumTask.AlbumImageViewController"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "527">
+               </Location>
+               <Location
+                  uuid = "7C703A5E-3FE8-4917-85BA-DF505E52DD0D - dff291fbee4cf7f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpoknAlbumTask.AlbumImageViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SpoknAlbumTask.AlbumImageViewController&gt;"
+                  moduleName = "SpoknAlbumTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yasminmohsen/Desktop/Spoken-Assessment-Task/SpoknAlbumTask/SpoknAlbumTask/Modules/AlbumImage/Presentation/AlbumImageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "471">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

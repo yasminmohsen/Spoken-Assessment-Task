@@ -45,6 +45,8 @@
 		6C886CAC278EF01800FEAA72 /* ExtensionHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C886CAB278EF01800FEAA72 /* ExtensionHomeViewController.swift */; };
 		6C886CAE278EF31000FEAA72 /* SkeltonAppearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C886CAD278EF31000FEAA72 /* SkeltonAppearence.swift */; };
 		6C886CB0278F42B600FEAA72 /* AlbumImageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C886CAF278F42B600FEAA72 /* AlbumImageViewModelTests.swift */; };
+		6C886CCA278F5F4F00FEAA72 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C886CC9278F5F4F00FEAA72 /* CustomError.swift */; };
+		6C886CCD2790122300FEAA72 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C886CCC2790122300FEAA72 /* AlertManager.swift */; };
 		6CC5AC99278CBA6800CC778E /* ExtensionAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC5AC98278CBA6800CC778E /* ExtensionAlbumViewController.swift */; };
 		6CC5AC9E278D72BE00CC778E /* Users.json in Resources */ = {isa = PBXBuildFile; fileRef = 6CC5AC9D278D72BE00CC778E /* Users.json */; };
 		6CC5ACA0278D730800CC778E /* Albums.json in Resources */ = {isa = PBXBuildFile; fileRef = 6CC5AC9F278D730800CC778E /* Albums.json */; };
@@ -106,6 +108,8 @@
 		6C886CAB278EF01800FEAA72 /* ExtensionHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHomeViewController.swift; sourceTree = "<group>"; };
 		6C886CAD278EF31000FEAA72 /* SkeltonAppearence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeltonAppearence.swift; sourceTree = "<group>"; };
 		6C886CAF278F42B600FEAA72 /* AlbumImageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumImageViewModelTests.swift; sourceTree = "<group>"; };
+		6C886CC9278F5F4F00FEAA72 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		6C886CCC2790122300FEAA72 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		6CC5AC98278CBA6800CC778E /* ExtensionAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionAlbumViewController.swift; sourceTree = "<group>"; };
 		6CC5AC9D278D72BE00CC778E /* Users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Users.json; sourceTree = "<group>"; };
 		6CC5AC9F278D730800CC778E /* Albums.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Albums.json; sourceTree = "<group>"; };
@@ -176,11 +180,8 @@
 			children = (
 				6C3ADCB9278B37A3000418EC /* AppDelegate.swift */,
 				6C3ADCBB278B37A3000418EC /* SceneDelegate.swift */,
-				6CC5AC92278C2B2A00CC778E /* Other */,
 				6C3ADD0A278B3A81000418EC /* Commons */,
 				6C3ADD09278B3A7D000418EC /* ApiService */,
-				6C3ADD06278B3A61000418EC /* NetworkLayer */,
-				6C3ADD08278B3A67000418EC /* Model */,
 				6C3ADD05278B3A5E000418EC /* Modules */,
 				6CC5AC91278C2AE700CC778E /* View */,
 				6CC5ACA3278D740600CC778E /* Stubs */,
@@ -197,6 +198,7 @@
 				6CC5ACB1278DC3A500CC778E /* Mocks */,
 				6C3ADCD3278B37A7000418EC /* SpoknAlbumTaskTests.swift */,
 				6CC5ACAF278D83AA00CC778E /* HomeViewModelTests.swift */,
+				6C886CAF278F42B600FEAA72 /* AlbumImageViewModelTests.swift */,
 				6C3ADCD5278B37A7000418EC /* Info.plist */,
 			);
 			path = SpoknAlbumTaskTests;
@@ -214,27 +216,11 @@
 		6C3ADD05278B3A5E000418EC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				6C886CBD278F506700FEAA72 /* ImageViewer */,
-				6C886CB6278F4F8D00FEAA72 /* AlbumImage */,
 				6C886CB1278F4E7200FEAA72 /* Home */,
-				6CC5AC9A278CBA8800CC778E /* ViewControllers */,
+				6C886CB6278F4F8D00FEAA72 /* AlbumImage */,
+				6C886CBD278F506700FEAA72 /* ImageViewer */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		6C3ADD06278B3A61000418EC /* NetworkLayer */ = {
-			isa = PBXGroup;
-			children = (
-				6C3ADD1F278B3D6B000418EC /* NetworkManager.swift */,
-			);
-			path = NetworkLayer;
-			sourceTree = "<group>";
-		};
-		6C3ADD08278B3A67000418EC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		6C3ADD09278B3A7D000418EC /* ApiService */ = {
@@ -250,8 +236,8 @@
 		6C3ADD0A278B3A81000418EC /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				6C3ADD0D278B3B62000418EC /* JsonConverter.swift */,
-				6C886CAD278EF31000FEAA72 /* SkeltonAppearence.swift */,
+				6C886CC0278F5B3A00FEAA72 /* Presentation */,
+				6C886CBF278F5B3000FEAA72 /* Data */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -387,6 +373,65 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		6C886CBF278F5B3000FEAA72 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6C886CC3278F5BE200FEAA72 /* Utils */,
+				6C886CC2278F5B9A00FEAA72 /* Remote */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		6C886CC0278F5B3A00FEAA72 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				6C886CC4278F5C6900FEAA72 /* Base */,
+				6C886CCB279011FC00FEAA72 /* AlertManager */,
+				6C886CC1278F5B4300FEAA72 /* SkeltonManager */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		6C886CC1278F5B4300FEAA72 /* SkeltonManager */ = {
+			isa = PBXGroup;
+			children = (
+				6C886CAD278EF31000FEAA72 /* SkeltonAppearence.swift */,
+			);
+			path = SkeltonManager;
+			sourceTree = "<group>";
+		};
+		6C886CC2278F5B9A00FEAA72 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				6C3ADD1F278B3D6B000418EC /* NetworkManager.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		6C886CC3278F5BE200FEAA72 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6C3ADD0D278B3B62000418EC /* JsonConverter.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6C886CC4278F5C6900FEAA72 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6C886CC9278F5F4F00FEAA72 /* CustomError.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		6C886CCB279011FC00FEAA72 /* AlertManager */ = {
+			isa = PBXGroup;
+			children = (
+				6C886CCC2790122300FEAA72 /* AlertManager.swift */,
+			);
+			path = AlertManager;
+			sourceTree = "<group>";
+		};
 		6CC5AC91278C2AE700CC778E /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,26 +441,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		6CC5AC92278C2B2A00CC778E /* Other */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
 		6CC5AC95278CB94D00CC778E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				6C886CA6278E21F300FEAA72 /* ExtensionImageViewerViewController.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		6CC5AC9A278CBA8800CC778E /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		6CC5ACA3278D740600CC778E /* Stubs */ = {
@@ -439,7 +470,6 @@
 			isa = PBXGroup;
 			children = (
 				6CC5ACA4278D752700CC778E /* MockingNetworkManager.swift */,
-				6C886CAF278F42B600FEAA72 /* AlbumImageViewModelTests.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -599,10 +629,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C3ADD12278B3B8E000418EC /* ApiServices.swift in Sources */,
+				6C886CCA278F5F4F00FEAA72 /* CustomError.swift in Sources */,
 				6C3ADD1A278B3C69000418EC /* AlbumModel.swift in Sources */,
 				6C3ADD14278B3BCD000418EC /* ApiServicesExtension.swift in Sources */,
 				6C3ADD20278B3D6B000418EC /* NetworkManager.swift in Sources */,
 				6C886CA7278E21F300FEAA72 /* ExtensionImageViewerViewController.swift in Sources */,
+				6C886CCD2790122300FEAA72 /* AlertManager.swift in Sources */,
 				6C3ADD2F278B5CBD000418EC /* AlbumImageViewModel.swift in Sources */,
 				6C3ADD1E278B3C86000418EC /* HomeUserModel.swift in Sources */,
 				6C3ADD24278B3DCB000418EC /* HomeViewController.swift in Sources */,

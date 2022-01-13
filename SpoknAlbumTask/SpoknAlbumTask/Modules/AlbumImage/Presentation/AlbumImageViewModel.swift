@@ -15,6 +15,7 @@ class AlbumImageViewModel {
     var apiService :ApiServiceProtocol!
     lazy var imageBehaviourRelay = BehaviorRelay<[AlbumImage]>(value: [])
     lazy var isLoadingBehaviourRelay =  BehaviorRelay<Bool>(value: true)
+    lazy var errorBehaviourRelay =  BehaviorRelay<String>(value: "")
     private let disposeBag = DisposeBag()
     
     //MARK: - Set ApiService
@@ -33,11 +34,15 @@ class AlbumImageViewModel {
             .observe(on: MainScheduler.asyncInstance)
             .subscribe(onNext: {[weak self] albumImage in
                 guard let self = self else {return}
+                
                 self.imageBehaviourRelay.accept(albumImage)
                 self.isLoadingBehaviourRelay.accept(false)
                 
-            }, onError: { error in
-                //error
+            }, onError: { [weak self] error in
+                guard let self = self else {return}
+                
+                self.errorBehaviourRelay.accept(CustomError.localizedError(error: error))
+                
             }).disposed(by: disposeBag)
     }
     
@@ -45,7 +50,7 @@ class AlbumImageViewModel {
     
     func filteredContacts( query: String) -> [AlbumImage] {
         
-        let filteredContacts = imageBehaviourRelay.value.filter({ query.isEmpty || ($0.imageTitle.lowercased().hasPrefix(query.lowercased()))})
+        let filteredContacts = imageBehaviourRelay.value.filter({ query.isEmpty || ($0.imageTitle.lowercased().contains(query.lowercased()))})
         return filteredContacts
         
     }

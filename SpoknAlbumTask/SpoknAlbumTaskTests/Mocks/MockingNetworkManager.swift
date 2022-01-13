@@ -74,7 +74,7 @@ class MockingNetworkManager :ApiServiceProtocol {
 extension MockingNetworkManager {
     
     
-    private func ChangeToErrorReqProvider(){
+    fileprivate func ChangeToErrorReqProvider(){
         
         let customEndPoint = {(target: ApiServices)->Endpoint in
             return Endpoint(url: ((URL(target: target).absoluteString)),

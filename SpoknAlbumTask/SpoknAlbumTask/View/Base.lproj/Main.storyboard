@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Profile-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="SpoknAlbumTask" customModuleProvider="target" sceneMemberID="viewController">
@@ -191,7 +191,7 @@
                             <constraint firstItem="MiW-ZN-zI8" firstAttribute="leading" secondItem="Qag-8d-udv" secondAttribute="trailing" constant="5" id="yCd-LF-Os4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="5i8-FA-pjV"/>
+                    <navigationItem key="navigationItem" title="Profile" id="5i8-FA-pjV"/>
                     <connections>
                         <outlet property="albumTableView" destination="toi-rS-GPr" id="fAo-Cr-iHX"/>
                         <outlet property="myAlbumsLabel" destination="lOF-ZR-3vf" id="XsT-Kr-bdf"/>
@@ -266,7 +266,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="M3U-YU-1K8">
                                 <rect key="frame" x="0.0" y="191" width="414" height="671"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XQs-87-ah6">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="XQs-87-ah6">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -274,7 +274,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="lpl-kK-ShT" customClass="AlbumImageCollectionViewCell" customModule="SpoknAlbumTask" customModuleProvider="target">
-                                        <rect key="frame" x="103.5" y="0.0" width="207" height="149"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="149"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jdP-qm-it1">
                                             <rect key="frame" x="0.0" y="0.0" width="207" height="149"/>

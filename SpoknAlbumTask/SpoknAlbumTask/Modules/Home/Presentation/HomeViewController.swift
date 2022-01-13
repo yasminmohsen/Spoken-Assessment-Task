@@ -52,6 +52,16 @@ class HomeViewController: UIViewController {
         }).disposed(by: disposeBag)
         
         
+        
+        
+        homeViewModel.errorBehaviourRelay.skip(1).subscribe(onNext: { error in
+            showSimpleAlert(title: "Error", message: error, viewRef: self)
+        }).disposed(by: disposeBag)
+        
+        
+      
+
+        
         homeViewModel.homePublishSubj      ///Bind userName to userNameLabel
             .map {return $0.user.name}
             .bind(to: userNamelabel.rx.text)
@@ -75,6 +85,12 @@ class HomeViewController: UIViewController {
             .bind(to: albumTableView.rx.items(cellIdentifier: "cell", cellType: HomeTableViewCell.self)){row , item ,cell in
                 cell.coinfigurCell(albumObj: item)
             }.disposed(by: disposeBag)
+        
+        
+        
+        
+        
+        
         
         
     }

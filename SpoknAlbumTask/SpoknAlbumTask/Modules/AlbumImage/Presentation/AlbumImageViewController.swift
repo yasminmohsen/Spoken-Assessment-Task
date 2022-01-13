@@ -18,7 +18,7 @@ class AlbumImageViewController: UIViewController {
     //MARK: - Properties
     var albumId :Int!
     var albumTitle :String!
-    var countBehaviourRelay = BehaviorRelay<Int>(value: 3)
+    var countBehaviourRelay = BehaviorRelay<Int>(value:0)
     lazy var albumImageViewModel = AlbumImageViewModel()
     private let disposeBag = DisposeBag()
   
@@ -44,6 +44,11 @@ class AlbumImageViewController: UIViewController {
                 }
             }
         }).disposed(by: disposeBag)
+        
+        
+        albumImageViewModel.errorBehaviourRelay.skip(1).subscribe(onNext: { error in
+            showSimpleAlert(title: "Error", message: error, viewRef: self)
+        } ).disposed(by: disposeBag)
         
         //MARK: - Display Images and FilteredImages
         
